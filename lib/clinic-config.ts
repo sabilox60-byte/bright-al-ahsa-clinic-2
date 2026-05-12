@@ -466,7 +466,7 @@ export const clinicConfig: ClinicConfig = {
         num: "IV",
         name: { en: "Department IV — OB/GYN & Women's Health", ar: "القسم الرابع — النساء والولادة وصحّة المرأة" },
         sub: { en: "Discreet, women-only consultations", ar: "استشارات نسائية بسرّية تامّة" },
-        blurb: { en: "Gynecology, intimate health, and women's wellness led by Dr. Nadeen Kabboura. Female-only sessions available on request — booking via WhatsApp 0557337555.", ar: "أمراض النساء والولادة والصحّة الحميمة وعافية المرأة بقيادة د. نادين كبورا. جلسات نسائية فقط متاحة عند الطلب — الحجز عبر واتساب ٠٥٥٧٣٣٧٥٥٥." },
+        blurb: { en: "Gynecology, intimate health, and women's wellness — initial consultations on-site with Dr. Wafaa Saeed, with Bright Network senior OB/GYN consultants available by scheduled visit from the Khobar HQ. Female-only sessions available on request — WhatsApp 0557337555.", ar: "أمراض النساء والولادة والصحّة الحميمة وعافية المرأة — الاستشارات الأوّلية موقعياً مع د. وفاء سعيد، مع توفّر استشاريات نساء وولادة من شبكة برايت بزيارات مجدولة من المركز الرئيسي بالخبر. جلسات نسائية فقط متاحة عند الطلب — واتساب ٠٥٥٧٣٣٧٥٥٥." },
         treatments: [
           { en: "Gynecological consultation", ar: "استشارة نسائية" },
           { en: "Intimate health treatments", ar: "علاجات الصحّة الحميمة" },
@@ -695,9 +695,9 @@ export const clinicConfig: ClinicConfig = {
     },
     posts: [
       { tag: { en: "Dentistry", ar: "أسنان" }, title: { en: "When veneers are the right call (and when they're not)", ar: "متى يكون الفينير الخيار الصحيح (ومتى لا يكون)" }, author: "Dr. Hassan Nazzal", date: { en: "12 Apr 2026", ar: "١٢ أبريل ٢٠٢٦" }, variant: "sand" },
-      { tag: { en: "Women's Health", ar: "صحّة المرأة" }, title: { en: "Three questions to ask your OB/GYN this year", ar: "ثلاثة أسئلة لطبيبة النساء والولادة في هذا العام" }, author: "Dr. Nadeen Kabboura", date: { en: "28 Mar 2026", ar: "٢٨ مارس ٢٠٢٦" }, variant: "sage" },
+      { tag: { en: "Eastern Province", ar: "المنطقة الشرقية" }, title: { en: "Why driving two hours for dermatology used to be standard — and isn't anymore", ar: "لماذا كان قيادة ساعتين للجلدية معياراً — ولم يعد كذلك" }, author: "Dr. Wafaa Saeed", date: { en: "28 Mar 2026", ar: "٢٨ مارس ٢٠٢٦" }, variant: "sage" },
       { tag: { en: "Dermatology", ar: "جلدية" }, title: { en: "Laser hair removal in summer — what actually works in Saudi heat", ar: "إزالة الشعر بالليزر في الصيف — ما يعمل فعلاً في حرارة السعودية" }, author: "Dr. Marina Naddaf", date: { en: "14 Mar 2026", ar: "١٤ مارس ٢٠٢٦" }, variant: "terracotta" },
-      { tag: { en: "Aesthetics", ar: "تجميل" }, title: { en: "Lip filler — three volumes I recommend, and the one I refuse", ar: "فيلر الشفاه — ثلاثة أحجام أوصي بها، وحجمٌ واحد أرفضه" }, author: "Dr. Amirah Mohannadi", date: { en: "01 Mar 2026", ar: "١ مارس ٢٠٢٦" }, variant: "sand" },
+      { tag: { en: "Aesthetics", ar: "تجميل" }, title: { en: "Lip filler — three volumes I recommend, and the one I refuse", ar: "فيلر الشفاه — ثلاثة أحجام أوصي بها، وحجمٌ واحد أرفضه" }, author: "Dr. Wafaa Saeed", date: { en: "01 Mar 2026", ar: "١ مارس ٢٠٢٦" }, variant: "sand" },
       { tag: { en: "Practice", ar: "ممارسة" }, title: { en: "When we say no — three cases we declined this month", ar: "متى نقول «لا» — ثلاث حالات رفضناها هذا الشهر" }, author: "Bright Clinical Team", date: { en: "14 Feb 2026", ar: "١٤ فبراير ٢٠٢٦" }, variant: "dark" },
       { tag: { en: "Saudi Care", ar: "رعاية سعودية" }, title: { en: "What our Al Ahsa patients taught us in year one", ar: "ما علّمتنا إيّاه مريضات الأحساء في عامنا الأوّل" }, author: "Dr. Wafaa Saeed", date: { en: "28 Jan 2026", ar: "٢٨ يناير ٢٠٢٦" }, variant: "sage" },
     ],
