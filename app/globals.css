@@ -1,0 +1,863 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sticky department portrait (desktop default — disabled on mobile below) */
+.dept-sticky { position: sticky; top: 110px; }
+
+/* ────────────────────────────────────────────────────────────────────────
+   DEFAULT THEME — Medical Authority (navy ink + warm gold + cream)
+   For darker/cooler/lighter variants apply one of the `.theme-*` classes
+   to <html> via clinicConfig (e.g. <html className="theme-linen">).
+   ──────────────────────────────────────────────────────────────────────── */
+:root {
+  /* ═══════════════════════════════════════════════════════════════════════
+     PALETTE — Adapted from losangelesclinic.ae (chea-child.css extraction)
+     Their exact mapping:
+       #B29362 = gold (everything accent: buttons, headings, dividers, hover)
+       #3D3935 = warm dark text (NOT pure black — warm brown-black)
+       #7F8487 = warm muted gray (secondary text)
+       #F6F5F4 = warm off-white (page background)
+       #FFFFFF = pure white (card surfaces only)
+     Adapted intelligently for Bright — KEPT navy ink (Bright's medical
+     authority + facade identity); KEPT twilight purple ambient (real
+     building glow). Everything else aligned to LA Clinic's proven luxury.
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  /* CANVAS — LA's exact warm off-white */
+  --canvas: #f6f5f4;             /* LA exact match — warm barely-white */
+  --canvas-soft: #ffffff;        /* pure white card surfaces */
+  --canvas-ultra: #ffffff;       /* nested sections — pure breathing room */
+
+  /* INK — KEPT Bright's navy authority */
+  --ink: #0a1f2e;                /* Bright navy — signature, NOT LA's brown */
+  --ink-soft: #2a3f4f;           /* navy-warm body — Bright distinct */
+  --muted: #7f8487;              /* LA exact — warm gray (not cool #7f8487) */
+
+  /* GOLD — LA's exact warm brown-gold (proven luxury aesthetic category) */
+  --primary: #b29362;            /* LA exact — warm brown-gold */
+  --primary-deep: #8f7548;       /* deeper version for hovers/gradients */
+  --accent-warm: #d4b899;        /* lighter champagne for soft decorative */
+
+  /* SURFACES — pure white cards (LA's signature breathing move) */
+  --surface-sand: #f0ece1;       /* layered sections */
+  --surface-sand-soft: #f6f3e8;
+  --surface-card: #ffffff;       /* pure white — LA-clean */
+
+  /* BORDERS — minimal hairlines */
+  --border-warm: #ece5d4;
+
+  /* DARK SURFACE — kept navy (Bright's signature, not LA's charcoal) */
+  --dark-surface: #0a1f2e;
+  --on-dark: #f6f5f4;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 400ms;
+}
+
+/* ALT PALETTE 1 — "Linen + Rose" (softer, lighter, fashion-house feel)
+   Best for: Riyadh women-focused aesthetic, Jeddah luxury clinics */
+html.theme-linen {
+  --canvas: #faf6f0;
+  --canvas-soft: #fefaf3;
+  --canvas-ultra: #ffffff;
+  --ink: #2a1f1a;              /* warm dark plum-ink, not blue-black */
+  --ink-soft: #4a3a32;
+  --muted: #8a7c70;
+  --primary: #b08868;           /* terracotta-rose */
+  --primary-deep: #8a6b50;
+  --accent-warm: #d4a895;
+  --surface-sand: #f0e4d8;
+  --surface-sand-soft: #f6ecdf;
+  --surface-card: #fbf2e6;
+  --border-warm: #e0d0c0;
+}
+
+/* ALT PALETTE 2 — "Midnight + Silver" (cooler, modernist, Neom-coded)
+   Best for: longevity / men-inclusive / Riyadh tech-forward */
+html.theme-midnight {
+  --canvas: #f5f6f8;
+  --canvas-soft: #fbfcfd;
+  --canvas-ultra: #ffffff;
+  --ink: #0e1620;
+  --ink-soft: #2c3744;
+  --muted: #6a7588;
+  --primary: #9aa5b1;          /* brushed silver, not gold */
+  --primary-deep: #6a7588;
+  --accent-warm: #b8c4d0;
+  --surface-sand: #e8ecf1;
+  --surface-sand-soft: #eef1f5;
+  --surface-card: #f0f3f7;
+  --border-warm: #cfd6de;
+}
+
+/* ALT PALETTE 3 — "Olive + Oat" (Najdi heritage, Diriyah-coded)
+   Best for: Eastern Province, AlUla-inspired, longevity clinics */
+html.theme-olive {
+  --canvas: #f6f3e8;
+  --canvas-soft: #fbf9f0;
+  --canvas-ultra: #fffcf3;
+  --ink: #1f2418;
+  --ink-soft: #3a4030;
+  --muted: #7a8071;
+  --primary: #8a946d;           /* sage olive */
+  --primary-deep: #6a7553;
+  --accent-warm: #b0b890;
+  --surface-sand: #e8e4d0;
+  --surface-sand-soft: #efebd8;
+  --surface-card: #f0ecd8;
+  --border-warm: #d0ccb8;
+}
+
+::selection { background: var(--primary); color: var(--canvas-soft); }
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--font-inter-tight), "Inter Tight", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* CLEANER: subtle warm-cream → white wash instead of cream-to-sand */
+    background: linear-gradient(180deg, var(--canvas) 0%, var(--canvas-soft) 100%);
+    background-color: var(--canvas);
+  }
+
+  /* Lighter alternating-section utility — LA-clinic clean rhythm */
+  .section-air      { background: var(--canvas-ultra); }
+  .section-cream    { background: var(--canvas); }
+  .section-sand-soft{ background: linear-gradient(180deg, var(--surface-sand-soft) 0%, var(--surface-sand) 100%); }
+
+  /* Subtle paper grain — GPU-composited, no fixed attachment */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    will-change: transform;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.72 0 0 0 0 0.6 0 0 0 0 0.41 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+  }
+
+  main, header, footer { position: relative; z-index: 2; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; }
+  img { max-width: 100%; display: block; }
+
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  /* Containers */
+  .sc-container, .container-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .container-wide {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  @media (max-width: 640px) {
+    .sc-container, .container-page, .container-wide { padding: 0 20px; }
+  }
+
+  /* Font utilities */
+  .font-prose {
+    font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  }
+  .font-serif {
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-weight: 500;
+  }
+  .font-display {
+    font-family: var(--font-italiana), "Italiana", Georgia, serif;
+  }
+  .font-mono {
+    font-family: var(--font-mono), "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  /* Headlines */
+  .h-display {
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -0.005em;
+  }
+  .h-xl {
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+  }
+  .h-lg {
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.18;
+  }
+  .h-md {
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  /* Buttons — LA Clinic's exact warm brown-gold #B29362 (chea-child.css proven) */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(180deg, #c3a276 0%, #b29362 50%, #8f7548 100%);
+    color: var(--canvas-soft);
+    border: none;
+    padding: 14px 26px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow:
+      0 0 0 1px rgba(143, 117, 72, 0.55),
+      0 1px 0 rgba(255, 240, 210, 0.5) inset,
+      0 4px 14px rgba(178, 147, 98, 0.28);
+    transition: all var(--dur-base) var(--ease-standard);
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background: linear-gradient(180deg, #b29362 0%, #8f7548 100%);
+    box-shadow:
+      0 0 0 1px rgba(143, 117, 72, 0.75),
+      0 6px 20px rgba(178, 147, 98, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(253, 251, 246, 0.6);
+    backdrop-filter: blur(6px);
+    color: var(--ink);
+    border: none;
+    padding: 14px 26px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(10, 31, 46, 0.18);
+    transition: all var(--dur-base) var(--ease-standard);
+    cursor: pointer;
+  }
+  .btn-ghost:hover {
+    background: var(--surface-sand);
+    box-shadow: 0 0 0 1px rgba(10, 31, 46, 0.35);
+  }
+
+  .btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(180deg, #14283a 0%, #0a1f2e 100%);
+    color: var(--canvas-soft);
+    border: none;
+    padding: 14px 26px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: 0 4px 14px rgba(10, 31, 46, 0.25);
+    transition: all var(--dur-base) var(--ease-standard);
+    cursor: pointer;
+  }
+  .btn-dark:hover {
+    background: var(--ink-soft);
+    transform: translateY(-1px);
+  }
+
+  /* Overline — italic display label */
+  .overline {
+    font-family: var(--font-italiana), "Italiana", Georgia, serif;
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  /* Chip */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 24px;
+    font-family: var(--font-inter-tight), "Inter Tight", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: rgba(253, 251, 246, 0.7);
+    backdrop-filter: blur(6px);
+    color: var(--ink-soft);
+    box-shadow: 0 0 0 1px rgba(178, 147, 98, 0.35);
+  }
+  .chip-dark { background: rgba(10, 31, 46, 0.92); color: var(--accent-warm); box-shadow: none; }
+  .chip-sage { background: rgba(236, 229, 212, 0.5); color: var(--ink-soft); box-shadow: 0 0 0 1px rgba(122, 132, 113, 0.3); }
+
+  /* Cards — LA-clinic clean: pure white surface with refined hairline shadow */
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow:
+      0 0 0 1px rgba(236, 229, 212, 0.9),
+      0 12px 36px rgba(10, 31, 46, 0.04);
+    transition: all var(--dur-base) var(--ease-standard);
+  }
+  .card-interactive { cursor: pointer; }
+  .card-interactive:hover {
+    box-shadow:
+      0 0 0 1px rgba(200, 160, 78, 0.45),
+      0 18px 56px rgba(10, 31, 46, 0.10);
+    transform: translateY(-2px);
+  }
+
+  /* Inputs */
+  .input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    border: none;
+    border-radius: 4px;
+    padding: 14px 16px;
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-size: 17px;
+    color: var(--ink);
+    box-shadow: 0 0 0 1px rgba(236, 229, 212, 0.7);
+    outline: none;
+    transition: box-shadow var(--dur-fast) var(--ease-standard);
+  }
+  .input:focus {
+    box-shadow: 0 0 0 1px var(--primary), 0 0 0 4px rgba(178, 147, 98, 0.15);
+  }
+
+  /* Sections */
+  .section { padding: 96px 0; }
+  .section-sm { padding: 64px 0; }
+
+  .section-dark {
+    background:
+      radial-gradient(circle at 50% 0%, rgba(178, 147, 98, 0.14) 0%, transparent 60%),
+      linear-gradient(180deg, #0a1f2e 0%, #14283a 100%);
+    color: var(--canvas-soft);
+  }
+  .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 {
+    color: var(--canvas-soft);
+  }
+  .section-dark .overline { color: rgba(236, 229, 212, 0.85); }
+
+  .section-terra {
+    background:
+      radial-gradient(circle at 80% 0%, rgba(255, 240, 210, 0.18) 0%, transparent 50%),
+      linear-gradient(135deg, #b29362 0%, #8f7548 100%);
+    color: var(--canvas-soft);
+  }
+  .section-terra h1, .section-terra h2, .section-terra h3 { color: var(--canvas-soft); }
+  .section-terra .overline { color: rgba(253, 251, 246, 0.8); }
+
+  .section-sand {
+    background: linear-gradient(180deg, #f0ece1 0%, #e0d5b8 100%);
+  }
+
+  /* Prose (book-style paragraphs) */
+  .prose p {
+    font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .prose p + p { margin-top: 16px; }
+
+  /* Pretty link underline on hover */
+  .tlink { position: relative; display: inline-block; }
+  .tlink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-fast) var(--ease-standard);
+  }
+  .tlink:hover::after { transform: scaleX(1); }
+
+  /* Dotted divider — printed page feel */
+  .rule-dotted {
+    border: 0;
+    border-top: 1px dotted rgba(178, 147, 98, 0.45);
+    margin: 0;
+  }
+
+  /* Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 600ms var(--ease-standard), transform 600ms var(--ease-standard);
+  }
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Skip-to-content (a11y) — visible only on focus */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    z-index: 100;
+    background: var(--ink);
+    color: var(--canvas-soft);
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+  }
+  .skip-link:focus {
+    left: 16px;
+  }
+
+  /* Variable-font breath on hero H1 — imperceptible, brand DNA move */
+  @keyframes weightBreath {
+    0%, 100% { font-variation-settings: "wght" 600; }
+    50%      { font-variation-settings: "wght" 540; }
+  }
+  .h-display { animation: weightBreath 8s var(--ease-standard) infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    .h-display { animation: none; }
+  }
+
+  /* Scroll-driven fade-up — CSS-only, compositor-thread */
+  @supports (animation-timeline: view()) {
+    .scroll-fade {
+      animation: scrollFade linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+    @keyframes scrollFade {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  }
+}
+
+/* ── RTL adjustments ───────────────────────────────────────────────────────── */
+html[dir="rtl"] body { font-family: var(--font-amiri), "Amiri", "Noto Naskh Arabic", serif; }
+html[dir="rtl"] .h-display,
+html[dir="rtl"] .h-xl,
+html[dir="rtl"] .h-lg,
+html[dir="rtl"] .h-md,
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3 {
+  font-family: var(--font-amiri), "Amiri", "Noto Naskh Arabic", serif;
+}
+html[dir="rtl"] .font-prose {
+  font-family: var(--font-amiri), "Amiri", "Noto Naskh Arabic", serif;
+  letter-spacing: 0;
+}
+html[dir="rtl"] .overline { letter-spacing: 0.06em; }
+html[dir="rtl"] .chip { letter-spacing: 0.04em; }
+
+/* Page transition */
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-in { animation: pageIn 500ms var(--ease-standard); }
+
+/* Hero fade-up */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 700ms var(--ease-standard) both; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   HERO VIDEO — full-width ambient background (Bright Al Ahsa signature)
+   Drop bright-hero.mp4 + bright-hero-poster.jpg into /public/hero/
+   ═══════════════════════════════════════════════════════════════════════ */
+/* Hero video stage — shows poster as CSS background for instant LCP,
+   then JS injects the <video> on top once mounted. Background poster
+   switches based on viewport so mobile gets the portrait poster. */
+.hero-video-stage {
+  background-image: url("/hero/bright-hero-poster.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .hero-video-stage {
+    background-image: url("/hero/bright-hero-mobile-poster.jpg");
+    background-position: center center;
+  }
+}
+
+/* Video element (injected by JS) — never set opacity:0; iOS Safari
+   refuses autoplay on invisible videos. */
+.hero-video {
+  opacity: 1;
+}
+
+/* Bright's signature twilight-purple ambient glow (matches night facade) */
+.hero-twilight-glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(78, 56, 122, 0.32) 0%,
+    rgba(78, 56, 122, 0.14) 40%,
+    rgba(78, 56, 122, 0) 70%
+  );
+  pointer-events: none;
+  filter: blur(8px);
+  animation: twilightDrift 14s var(--ease-standard) infinite alternate;
+}
+@keyframes twilightDrift {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  100% { transform: translate(28px, -20px) scale(1.08); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-twilight-glow { animation: none; }
+}
+
+/* Hero text readability — DARK navy halo behind WHITE hero text so it
+   reads cleanly over any frame of the video (bright/dark/colored). */
+.hero-textreadable .h-display,
+.hero-textreadable .h-display em,
+.hero-textreadable .hero-lead-italic,
+.hero-textreadable .hero-lead,
+.hero-textreadable .overline {
+  text-shadow:
+    0 0 24px rgba(10, 31, 46, 0.65),
+    0 0 8px rgba(10, 31, 46, 0.55),
+    0 2px 3px rgba(10, 31, 46, 0.45);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   MOBILE LUXURY LAYER — premium fashion-brand feel, NOT shrunk desktop
+   ═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  /* ── Mobile Safari scroll-glitch defenses ──────────────────────────
+     Paper-grain mix-blend-mode + backdrop-filter cause repaint glitches
+     during scroll on iOS Safari (text appears to overlap mid-scroll).
+     Strip the expensive composite effects on mobile only. */
+  body::before {
+    display: none !important;
+  }
+  body {
+    background: linear-gradient(180deg, var(--canvas) 0%, var(--surface-card) 100%);
+  }
+  /* Remove backdrop-filter from sticky/fixed surfaces on mobile */
+  .living-pulse,
+  .mobile-book-bar,
+  .concierge-panel,
+  nav[id="top"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .living-pulse { background: rgba(253, 251, 246, 0.98) !important; }
+  .mobile-book-bar { background: #0a1f2e !important; }
+
+  /* Ensure every section paints on its own layer at z-index 2 baseline
+     (matches what desktop sections do inline). NO contain/isolation —
+     those caused images to lock above text mid-scroll on iOS. */
+  main > section,
+  main > aside {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* KILL position:sticky on mobile — sticky portraits cause images to
+     hover while sibling text scrolls behind them on iOS Safari. */
+  .dept-sticky {
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* ── Layout primitives ─────────────────────────────────────────────── */
+  /* GLOBAL DEFENSIVE RULE — every inline-styled grid stacks on mobile
+     UNLESS it opts out with one of the explicit grid classes below.
+     Prevents the "missed mobile-stack class" footgun on inner pages. */
+  [style*="grid-template-columns"]:not(.outcome-grid):not(.journal-grid):not(.team-grid):not(.services-grid):not(.gallery-grid):not(.mobile-2col):not(.keep-grid):not(.icon-grid) {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+  [style*="grid-template-columns"]:not(.outcome-grid):not(.journal-grid):not(.team-grid):not(.services-grid):not(.gallery-grid):not(.mobile-2col):not(.keep-grid):not(.icon-grid) > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  [style*="grid-template-columns"]:not(.outcome-grid):not(.journal-grid):not(.team-grid):not(.services-grid):not(.gallery-grid):not(.mobile-2col):not(.keep-grid):not(.icon-grid) > *:not(:first-child) {
+    margin-top: 28px !important;
+  }
+
+  /* Opt-in classes for cases where a 2-col mobile makes sense (gallery thumbs) */
+  .mobile-2col    { display: grid !important; grid-template-columns: 1fr 1fr !important; }
+  .icon-grid      { display: grid !important; grid-template-columns: auto 1fr !important; gap: 12px !important; }
+  .gallery-grid   { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .keep-grid      { /* keeps original inline gridTemplateColumns even on mobile */ }
+
+  /* mobile-stack is now an explicit alias for the same default behavior */
+  .mobile-stack {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 28px !important;
+  }
+  .mobile-stack > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .mobile-stack > *:not(:first-child) {
+    margin-top: 28px !important;
+  }
+
+  .mobile-hide     { display: none !important; }
+  .mobile-only     { display: initial !important; }
+
+  /* ── Section rhythm — generous vertical air, premium magazine feel ── */
+  .section    { padding: 80px 0; }
+  .section-sm { padding: 56px 0; }
+  body { padding-bottom: 96px; } /* clear sticky bottom bar */
+
+  /* ── Typography scale-UP on mobile (premium fashion-brand pattern) ── */
+  /* Counterintuitive: luxury brands go BIGGER on mobile, not smaller */
+  .h-display {
+    font-size: clamp(44px, 13vw, 64px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.02em !important;
+  }
+  .h-xl      { font-size: clamp(34px, 10vw, 48px) !important; line-height: 1.08 !important; }
+  .h-lg      { font-size: clamp(26px, 7.5vw, 36px) !important; line-height: 1.15 !important; }
+  .h-md      { font-size: 22px !important; }
+
+  /* Larger body for thumb-readable comfort */
+  .prose p, .font-prose { font-size: 18px !important; line-height: 1.6 !important; }
+
+  /* Tighter overlines but bolder presence */
+  .overline { font-size: 11px !important; letter-spacing: 0.36em !important; }
+
+  /* ── Containers — luxury-fashion close-to-edge feel on hero ────────── */
+  .sc-container, .container-page, .container-wide { padding: 0 22px; }
+
+  /* ── Buttons — bigger touch targets (min 48px high), thumb-friendly ─ */
+  .btn-primary, .btn-ghost, .btn-dark {
+    padding: 16px 24px !important;
+    font-size: 13px !important;
+    min-height: 52px !important;
+  }
+
+  /* ── Nav ───────────────────────────────────────────────────────────── */
+  .nav-inner { padding: 14px 18px !important; }
+
+  /* Mobile menu overlay — padding-top clears EidBanner (~40px) + Nav (~70px) */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 49;
+    padding: 124px 24px calc(40px + env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .mobile-menu-link {
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 14px 0;
+    border-bottom: 1px dotted rgba(178,147,98,0.3);
+    display: block;
+    transition: color var(--dur-fast) var(--ease-standard);
+    letter-spacing: -0.005em;
+  }
+
+  /* ── Component-specific mobile rules ───────────────────────────────── */
+  .doctor-card-inner { grid-template-columns: 1fr !important; }
+  .doctor-portrait   { height: 260px !important; min-height: unset !important; }
+  .booking-sidebar   { display: none !important; }
+  .booking-form      { grid-template-columns: 1fr !important; }
+  .hero-illustration { display: none !important; }
+  .page-hero-portrait{ display: none !important; }
+  .page-hero-grid    { grid-template-columns: 1fr !important; }
+
+  /* BeforeAfter — stack with breathing room, swipe-able feel */
+  .ba-card-inner { grid-template-columns: 1fr !important; }
+  .ba-card-inner > :first-child { min-height: 200px !important; }
+
+  /* ── MobileBookBar — show ────────────────────────────────────────── */
+  .mobile-book-bar { display: flex !important; }
+
+  /* ── ScrollIndicator — show ──────────────────────────────────────── */
+  .scroll-indicator { display: flex !important; }
+
+  /* ── VoiceConcierge bottom-sheet on mobile ───────────────────────── */
+  .concierge-pill { display: none !important; }
+  .concierge-backdrop { display: block !important; }
+  .concierge-panel {
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    max-height: 88vh !important;
+    border-radius: 18px 18px 0 0 !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    animation: sheetUp 320ms cubic-bezier(0.16, 1, 0.3, 1);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .concierge-handle { display: block !important; }
+
+  /* ── EidBanner — keep eyebrow + countdown + CTA only ─────────────── */
+  .eid-banner { padding: 8px 0 !important; }
+  .eid-banner-dash,
+  .eid-banner-line { display: none !important; }
+  .eid-banner-row {
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .eid-banner-text {
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .eid-banner-eyebrow {
+    font-size: 10px !important;
+    letter-spacing: 0.24em !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  .eid-banner-actions { gap: 8px !important; flex: 0 0 auto !important; }
+  .eid-banner-countdown { font-size: 10px !important; }
+  .eid-banner-cta { padding: 6px 10px !important; font-size: 10px !important; }
+
+  /* ── LivingPulse — HIDE on mobile (save real estate) ─────────────── */
+  /* Eid banner countdown already signals urgency; the granular pulse
+     is desktop-only premium signal. On mobile it crowds above-fold. */
+  .living-pulse { display: none !important; }
+
+  /* ── Hero — tighten the desktop margins on mobile ────────────────── */
+  .hero-lead-italic { margin-top: 24px !important; font-size: 19px !important; }
+  .hero-lead         { margin-top: 14px !important; margin-bottom: 24px !important; font-size: 17px !important; }
+  .hero-stats        { margin-top: 28px !important; }
+  /* Hide secondary CTA on mobile — primary + sister-share + ribbon are enough */
+  .hero-cta-secondary { display: none !important; }
+
+  /* ── Hero video on mobile — FULL visibility, no overlay ─────────────
+     Text is now white with dark-navy text-shadow halo, so video stays
+     untouched. Recenter crop so the subject stays in frame. */
+  .hero-video {
+    object-position: center center !important;
+    opacity: 1 !important;
+  }
+
+  /* ── Snap-scroll strips on mobile (Outcome Compass + Journal + Team + Services) ── */
+  .outcome-grid,
+  .journal-grid,
+  .team-grid,
+  .services-grid {
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 -22px !important;
+    padding: 0 22px 16px !important;
+    gap: 14px !important;
+  }
+  .outcome-grid::-webkit-scrollbar,
+  .journal-grid::-webkit-scrollbar,
+  .team-grid::-webkit-scrollbar,
+  .services-grid::-webkit-scrollbar { display: none; }
+  .outcome-grid > *,
+  .journal-grid > *,
+  .team-grid > *,
+  .services-grid > * {
+    flex: 0 0 82% !important;
+    min-width: 82% !important;
+    width: 82% !important;
+    max-width: 82% !important;
+    margin-top: 0 !important;
+    scroll-snap-align: center;
+  }
+  .outcome-grid > * { min-height: 220px !important; }
+
+  /* ── Hero composition on mobile ───────────────────────────────────── */
+  /* Hero illustration goes below text on mobile (already hidden by .hero-illustration) */
+  /* Stats become horizontal scroll strip */
+  .hero-stats {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 24px -22px 0 !important;
+    padding: 0 22px;
+    flex-wrap: nowrap !important;
+  }
+  .hero-stats::-webkit-scrollbar { display: none; }
+}
+
+/* Desktop — explicitly hide mobile-only elements */
+@media (min-width: 768px) {
+  .mobile-only        { display: none !important; }
+  .mobile-book-bar    { display: none !important; }
+  .scroll-indicator   { display: none !important; }
+  .concierge-handle   { display: none !important; }
+  .concierge-backdrop { display: none !important; }
+}
+
+/* Mobile bottom-sheet animation */
+@keyframes sheetUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(0.6); transform-origin: top; }
+  50%      { opacity: 1;   transform: scaleY(1);   transform-origin: top; }
+}

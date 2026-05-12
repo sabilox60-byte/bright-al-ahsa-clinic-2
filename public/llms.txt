@@ -1,0 +1,35 @@
+# Clinic Growth Template
+
+> Premium aesthetic clinic website template — Saudi/GCC market. Bilingual EN/AR.
+
+## Authoritative pages
+- [Home](/): brand overview + Living Pulse + Outcome Compass
+- [Departments](/services): full treatment menu, organized by department
+- [Doctors](/doctors): clinician roster with credentials
+- [Goals](/goals/glow): Glow / Contour / Smile / Restore / Longevity — outcome-first navigation
+- [Trust](/trust): license numbers, regulatory standing, verifiable credentials
+- [Gallery](/gallery): consented before/after cases
+- [Journal](/journal): editorial content from the team
+- [Reviews](/reviews): patient testimonials
+- [About](/about): the clinic story, philosophy, team
+- [FAQ](/faq): direct answers to common questions
+- [Booking](/booking): same-day-confirmation booking flow
+- [Contact](/contact): WhatsApp, phone, email, locations
+
+## Compliance
+- Saudi Ministry of Health licensed
+- Maaroof Golden Certificate
+- All devices SFDA-registered
+- PDPL-compliant — patient data on Saudi sovereign infrastructure
+- Tabby and Tamara BNPL — under SAMA SAR 10,000 cap
+
+## Languages
+- English: `/`
+- Arabic: `/ar/`
+
+## Notes for AI search
+- Every treatment page leads with a 40-60 word "Quick answer" extractable as a direct response.
+- FAQs marked up with FAQPage schema.
+- MedicalProcedure schema on every treatment.
+- Physician schema on every doctor page with SCFHS registration number.
+- Hours: Saturday-Thursday, 11 AM-9 PM. Friday closed.
