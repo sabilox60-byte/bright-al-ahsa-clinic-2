@@ -23,10 +23,10 @@ const testimonials = [
   {
     patientNumber: "№ 247",
     quote:
-      "I waited three months before booking. I waited 24 hours after the first session to call my sister.",
+      "I waited three months before booking. I waited 24 hours after the first session to call my sister — Mubarraz finally has the standard we used to drive to Khobar for.",
     initials: "A.M.",
-    location: "Khobar",
-    treatment: "Three Hydrafacial sessions · Dr. Marina Naddaf",
+    location: "Al Mubarraz",
+    treatment: "Three Hydrafacial sessions · Dr. Wafaa Saeed",
     days: "Day 1 · Day 28 · Day 90",
   },
   {
@@ -34,7 +34,7 @@ const testimonials = [
     quote:
       "My mother came with me to the first visit. By the third, she had booked her own.",
     initials: "R.K.",
-    location: "Al Ahsa",
+    location: "Hofuf",
     treatment: "Filler · Dr. Wafaa Saeed",
     days: "Day 1 · Day 14",
   },
