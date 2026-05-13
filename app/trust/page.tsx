@@ -137,7 +137,7 @@ export default function TrustPage() {
               <div className="overline" style={{ color: "#b29362", marginBottom: 14 }}>
                 {v.reviewsBlock.eyebrow.en}
               </div>
-              <h2 className="h-lg" style={{ color: "#ffffff", marginBottom: 32, maxWidth: 720 }}>
+              <h2 className="h-lg" style={{ color: "#0a1f2e", marginBottom: 32, maxWidth: 720 }}>
                 {v.reviewsBlock.headline.en}
               </h2>
               <iframe

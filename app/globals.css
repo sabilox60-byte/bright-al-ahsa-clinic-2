@@ -371,16 +371,19 @@ html.theme-olive {
   .section { padding: 96px 0; }
   .section-sm { padding: 64px 0; }
 
+  /* WARM section — replaces dark navy section. Champagne+cream wash with
+     navy text. Reads inviting + premium (no longer "heavy" or "cold"). */
   .section-dark {
     background:
-      radial-gradient(circle at 50% 0%, rgba(178, 147, 98, 0.14) 0%, transparent 60%),
-      linear-gradient(180deg, #0a1f2e 0%, #14283a 100%);
-    color: var(--canvas-soft);
+      radial-gradient(circle at 50% 0%, rgba(212, 184, 153, 0.55) 0%, transparent 60%),
+      linear-gradient(180deg, #f5efe1 0%, #ece5d4 100%);
+    color: var(--ink);
   }
   .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 {
-    color: var(--canvas-soft);
+    color: var(--ink);
   }
-  .section-dark .overline { color: rgba(236, 229, 212, 0.85); }
+  .section-dark .overline { color: var(--primary); }
+  .section-dark em { color: var(--primary-deep); }
 
   .section-terra {
     background:
@@ -711,25 +714,80 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   /* ── Nav ───────────────────────────────────────────────────────────── */
   .nav-inner { padding: 14px 18px !important; }
 
-  /* Mobile menu overlay — padding-top clears EidBanner (~40px) + Nav (~70px) */
+  /* Mobile menu overlay — padding-top clears Nav (~80px) */
   .mobile-menu {
     position: fixed;
     inset: 0;
     z-index: 49;
-    padding: 124px 24px calc(40px + env(safe-area-inset-bottom));
+    padding: 96px 24px calc(40px + env(safe-area-inset-bottom));
     display: flex;
     flex-direction: column;
     overflow-y: auto;
   }
-  .mobile-menu-link {
+
+  /* Divinia-style luxury mobile menu — centered, serif, generous spacing */
+  .mobile-menu-divinia {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile-menu-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+  }
+  .mobile-menu-divinia-link {
     font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 400;
     padding: 14px 0;
-    border-bottom: 1px dotted rgba(178,147,98,0.3);
-    display: block;
-    transition: color var(--dur-fast) var(--ease-standard);
-    letter-spacing: -0.005em;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #0a1f2e;
+    transition: color 250ms var(--ease-standard);
+  }
+  .mobile-menu-divinia-link:hover {
+    color: #b29362;
+  }
+  .mobile-menu-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 16px;
+  }
+  .mobile-menu-language {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #2a3f4f;
+    font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+    font-size: 17px;
+    padding: 10px 14px;
+    cursor: pointer;
+  }
+  .mobile-menu-book {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #c3a276 0%, #b29362 50%, #8f7548 100%);
+    color: #ffffff;
+    padding: 18px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(178, 147, 98, 0.3);
   }
 
   /* ── Component-specific mobile rules ───────────────────────────────── */

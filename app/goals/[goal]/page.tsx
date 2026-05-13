@@ -224,10 +224,10 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
         {/* Book CTA */}
         <section className="section section-dark">
           <div className="container-page" style={{ textAlign: "center", maxWidth: 720 }}>
-            <h2 className="h-xl" style={{ color: "#ffffff", marginBottom: 18 }}>
+            <h2 className="h-xl" style={{ color: "#0a1f2e", marginBottom: 18 }}>
               Begin your <em style={{ fontStyle: "italic", color: accent }}>{g.name.en.toLowerCase()}</em> path.
             </h2>
-            <p className="font-prose" style={{ fontSize: 18, color: "#ece5d4", marginBottom: 32 }}>
+            <p className="font-prose" style={{ fontSize: 18, color: "#2a3f4f", marginBottom: 32 }}>
               First a consultation. Then a written plan. No commitment.
             </p>
             <a

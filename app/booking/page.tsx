@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -19,6 +19,25 @@ export default function BookingPage() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
+
+  // Pin scroll to the form heading on every step change.
+  // On mobile, the form re-render + iOS layout shift was scrolling the
+  // user a bit further down on Continue — this overrides that drift.
+  const formRef = useRef<HTMLDivElement>(null);
+  const isFirstRender = useRef(true);
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    if (!formRef.current) return;
+    const navOffset = 96;
+    const top =
+      formRef.current.getBoundingClientRect().top +
+      window.pageYOffset -
+      navOffset;
+    window.scrollTo({ top, behavior: "smooth" });
+  }, [step]);
 
   const canNext =
     (step === 0 && service) || (step === 1 && slot) || (step === 2 && name && phone);
@@ -48,7 +67,7 @@ export default function BookingPage() {
             style={{ gridTemplateColumns: "1.3fr 0.7fr" }}
           >
             {/* Multi-step form */}
-            <div className="card" style={{ padding: 40 }}>
+            <div ref={formRef} className="card" style={{ padding: 40, scrollMarginTop: 96 }}>
               {/* Progress bar */}
               <div style={{ display: "flex", gap: 10, marginBottom: 28 }}>
                 {[0, 1, 2, 3].map((s) => (

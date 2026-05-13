@@ -90,11 +90,11 @@ export default function AboutPage() {
         <section className="section section-dark" style={{ position: "relative", zIndex: 2 }}>
           <div className="container-page">
             <div className="text-center" style={{ marginBottom: 56 }}>
-              <ChapterMark roman="V" title="Commitments" dark />
-              <h2 className="h-xl" style={{ color: "#ffffff", marginTop: 20 }}>
+              <ChapterMark roman="V" title="Commitments" />
+              <h2 className="h-xl" style={{ color: "#0a1f2e", marginTop: 20 }}>
                 Four commitments,
                 <br />
-                <em style={{ fontStyle: "italic", color: "#b29362" }}>we stand by.</em>
+                <em style={{ fontStyle: "italic", color: "#8f7548" }}>we stand by.</em>
               </h2>
             </div>
             <div
@@ -104,7 +104,7 @@ export default function AboutPage() {
               {ap.commitments.map((v) => (
                 <div
                   key={v.n}
-                  style={{ borderTop: "1px solid #2a3f4f", paddingTop: 22 }}
+                  style={{ borderTop: "1px solid rgba(143, 117, 72, 0.35)", paddingTop: 22 }}
                 >
                   <span
                     className="font-prose italic"
@@ -112,12 +112,12 @@ export default function AboutPage() {
                   >
                     {v.n}.
                   </span>
-                  <h3 className="h-md" style={{ color: "#ffffff", marginTop: 10, fontSize: 22 }}>
+                  <h3 className="h-md" style={{ color: "#0a1f2e", marginTop: 10, fontSize: 22 }}>
                     {v.title.en}
                   </h3>
                   <p
                     className="font-prose"
-                    style={{ color: "#ece5d4", fontSize: 15, marginTop: 10, lineHeight: 1.65 }}
+                    style={{ color: "#2a3f4f", fontSize: 15, marginTop: 10, lineHeight: 1.65 }}
                   >
                     {v.description.en}
                   </p>

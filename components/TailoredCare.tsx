@@ -31,16 +31,16 @@ export default function TailoredCare() {
           </div>
         </div>
         <div>
-          <ChapterMark roman={c.chapterRoman} title={c.chapterTitle.en} dark />
-          <h2 className="h-xl" style={{ marginTop: 24, color: "#ffffff" }}>
+          <ChapterMark roman={c.chapterRoman} title={c.chapterTitle.en} />
+          <h2 className="h-xl" style={{ marginTop: 24, color: "#0a1f2e" }}>
             {c.headlinePartA.en}
             <br />
-            <em style={{ fontStyle: "italic", color: "#b29362" }}>{c.headlineEm.en}</em>
+            <em style={{ fontStyle: "italic", color: "#8f7548" }}>{c.headlineEm.en}</em>
           </h2>
           <p
             className="font-prose"
             style={{
-              color: "#ece5d4",
+              color: "#2a3f4f",
               fontSize: 18,
               lineHeight: 1.65,
               marginTop: 20,
@@ -66,7 +66,7 @@ export default function TailoredCare() {
                 style={{
                   gap: 18,
                   paddingBottom: 14,
-                  borderBottom: "1px dotted #2a3f4f",
+                  borderBottom: "1px dotted rgba(143, 117, 72, 0.35)",
                 }}
               >
                 <span
@@ -75,7 +75,7 @@ export default function TailoredCare() {
                 >
                   {p.num}.
                 </span>
-                <span style={{ color: "#ffffff", fontSize: 16 }}>{p.label.en}</span>
+                <span style={{ color: "#0a1f2e", fontSize: 16 }}>{p.label.en}</span>
               </li>
             ))}
           </ul>

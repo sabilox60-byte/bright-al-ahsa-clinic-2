@@ -139,22 +139,27 @@ export default function ServicesPage() {
           </section>
         ))}
 
-        {/* Equipment section */}
+        {/* Equipment section — warm champagne wash + navy text */}
         <section
           className="section"
-          style={{ background: "#0a1f2e", position: "relative", zIndex: 2 }}
+          style={{
+            background:
+              "radial-gradient(circle at 50% 0%, rgba(212, 184, 153, 0.55) 0%, transparent 60%), linear-gradient(180deg, #f5efe1 0%, #ece5d4 100%)",
+            position: "relative",
+            zIndex: 2,
+          }}
         >
           <div className="container-page">
             <div className="text-center" style={{ marginBottom: 48 }}>
-              <ChapterMark roman="V" title="Technology" dark />
-              <h2 className="h-xl" style={{ color: "#ffffff", marginTop: 20 }}>
+              <ChapterMark roman="V" title="Technology" />
+              <h2 className="h-xl" style={{ color: "#0a1f2e", marginTop: 20 }}>
                 Equipment
                 <br />
-                <em style={{ fontStyle: "italic", color: "#b29362" }}>we trust.</em>
+                <em style={{ fontStyle: "italic", color: "#8f7548" }}>we trust.</em>
               </h2>
               <p
                 className="font-prose italic"
-                style={{ color: "#ece5d4", fontSize: 18, marginTop: 16, maxWidth: 560, marginInline: "auto" }}
+                style={{ color: "#2a3f4f", fontSize: 18, marginTop: 16, maxWidth: 560, marginInline: "auto" }}
               >
                 Internationally certified technology, chosen because it is effective and safe.
               </p>
@@ -168,9 +173,9 @@ export default function ServicesPage() {
                   key={eq.name}
                   style={{
                     padding: 24,
-                    background: "#14283a",
+                    background: "#ffffff",
                     borderRadius: 8,
-                    boxShadow: "0 0 0 1px #2a3f4f",
+                    boxShadow: "0 0 0 1px rgba(143, 117, 72, 0.18), 0 8px 24px rgba(10, 31, 46, 0.04)",
                   }}
                 >
                   <div
@@ -178,12 +183,12 @@ export default function ServicesPage() {
                       fontFamily: "var(--font-source-serif), 'Source Serif 4', Georgia, serif",
                       fontWeight: 600,
                       fontSize: 18,
-                      color: "#ffffff",
+                      color: "#0a1f2e",
                     }}
                   >
                     {eq.name}
                   </div>
-                  <div style={{ marginTop: 8, fontSize: 14, color: "#ece5d4", lineHeight: 1.55 }}>
+                  <div style={{ marginTop: 8, fontSize: 14, color: "#2a3f4f", lineHeight: 1.55 }}>
                     {eq.description.en}
                   </div>
                 </div>

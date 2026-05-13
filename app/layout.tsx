@@ -4,7 +4,6 @@ import { clinicConfig } from "@/lib/clinic-config";
 import { clinicExtras } from "@/lib/clinic-extras";
 import { organizationLd, websiteLd } from "@/lib/schema-ld";
 import LenisProvider from "@/components/LenisProvider";
-import EidBanner from "@/components/EidBanner";
 import VoiceConcierge from "@/components/VoiceConcierge";
 import MobileBookBar from "@/components/MobileBookBar";
 import SchemaInjector from "@/components/SchemaInjector";
@@ -95,7 +94,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <a href="#main" className="skip-link">Skip to content</a>
-        <EidBanner locale="en" />
         <LenisProvider>{children}</LenisProvider>
         <VoiceConcierge locale="en" />
         <MobileBookBar locale="en" />

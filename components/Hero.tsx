@@ -74,32 +74,39 @@ export default function Hero() {
               {clinicConfig.hero.headlineEm.en}
             </em>
           </h1>
-          <p
-            className="font-prose italic hero-lead-italic"
-            style={{
-              fontSize: 22,
-              lineHeight: 1.5,
-              color: "rgba(255,255,255,0.92)",
-              marginTop: 48,
-              maxWidth: 540,
-            }}
+          {clinicConfig.hero.leadItalic.en && (
+            <p
+              className="font-prose italic hero-lead-italic"
+              style={{
+                fontSize: 22,
+                lineHeight: 1.5,
+                color: "rgba(255,255,255,0.92)",
+                marginTop: 48,
+                maxWidth: 540,
+              }}
+            >
+              {clinicConfig.hero.leadItalic.en}
+            </p>
+          )}
+          {clinicConfig.hero.lead.en && (
+            <p
+              className="font-prose hero-lead"
+              style={{
+                fontSize: 18,
+                lineHeight: 1.6,
+                color: "rgba(255,255,255,0.88)",
+                marginTop: 18,
+                marginBottom: 32,
+                maxWidth: 540,
+              }}
+            >
+              {clinicConfig.hero.lead.en}
+            </p>
+          )}
+          <div
+            className="flex gap-3 flex-wrap items-center"
+            style={{ marginTop: clinicConfig.hero.lead.en ? 0 : 48 }}
           >
-            {clinicConfig.hero.leadItalic.en}
-          </p>
-          <p
-            className="font-prose hero-lead"
-            style={{
-              fontSize: 18,
-              lineHeight: 1.6,
-              color: "rgba(255,255,255,0.88)",
-              marginTop: 18,
-              marginBottom: 32,
-              maxWidth: 540,
-            }}
-          >
-            {clinicConfig.hero.lead.en}
-          </p>
-          <div className="flex gap-3 flex-wrap items-center">
             <a
               href={clinicConfig.contact.whatsappLink}
               target="_blank"

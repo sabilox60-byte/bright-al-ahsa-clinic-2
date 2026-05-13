@@ -160,23 +160,23 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
         </div>
       </nav>
 
-      {/* Mobile menu overlay */}
+      {/* Mobile menu overlay — Divinia-style: centered serif, generous spacing */}
       {menuOpen && (
         <div
-          className="mobile-menu lg:hidden"
-          style={{ background: dark ? "#0a1f2e" : "#f6f5f4" }}
+          className="mobile-menu mobile-menu-divinia lg:hidden"
+          style={{ background: "#fbf9f4" }}
         >
-          <nav style={{ flex: 1 }}>
+          <nav className="mobile-menu-nav">
             {clinicConfig.navigation.items.map((item) => {
               const active = pathname === item.href;
               return (
                 <Link
                   key={item.key}
                   href={item.href}
-                  className="mobile-menu-link"
+                  className="mobile-menu-divinia-link"
                   onClick={() => setMenuOpen(false)}
                   style={{
-                    color: active ? "#b29362" : (dark ? "#ffffff" : "#0a1f2e"),
+                    color: active ? "#b29362" : "#0a1f2e",
                   }}
                 >
                   {item.label.en}
@@ -184,25 +184,28 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
               );
             })}
           </nav>
-          <div style={{ marginTop: 40, display: "flex", flexDirection: "column", gap: 12 }}>
+          <div className="mobile-menu-footer">
+            <button
+              type="button"
+              className="mobile-menu-language"
+              aria-label="Switch language"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              <span>English</span>
+              <span style={{ opacity: 0.5 }}>›</span>
+            </button>
             <a
               href={clinicConfig.contact.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
-              style={{ textAlign: "center", justifyContent: "center" }}
+              className="mobile-menu-book"
             >
               {clinicConfig.navigation.bookCta.en}
             </a>
-            <div
-              style={{
-                fontSize: 13,
-                color: dark ? "#7f8487" : "#7f8487",
-                textAlign: "center",
-              }}
-            >
-              {clinicConfig.contact.hours.en}
-            </div>
           </div>
         </div>
       )}

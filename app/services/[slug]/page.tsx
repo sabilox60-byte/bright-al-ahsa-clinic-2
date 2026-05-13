@@ -224,10 +224,10 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
         {/* Final CTA */}
         <section className="section section-dark">
           <div className="container-page" style={{ textAlign: "center", maxWidth: 720 }}>
-            <h2 className="h-xl" style={{ color: "#ffffff", marginBottom: 18 }}>
-              Discuss <em style={{ fontStyle: "italic", color: "#b29362" }}>{p.nameEn.toLowerCase()}</em> with a clinician.
+            <h2 className="h-xl" style={{ color: "#0a1f2e", marginBottom: 18 }}>
+              Discuss <em style={{ fontStyle: "italic", color: "#8f7548" }}>{p.nameEn.toLowerCase()}</em> with a clinician.
             </h2>
-            <p className="font-prose" style={{ fontSize: 18, color: "#ece5d4", marginBottom: 32 }}>
+            <p className="font-prose" style={{ fontSize: 18, color: "#2a3f4f", marginBottom: 32 }}>
               Free consultation first. No commitment to treatment.
             </p>
             <a

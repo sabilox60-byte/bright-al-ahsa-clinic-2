@@ -253,15 +253,12 @@ export const clinicConfig: ClinicConfig = {
 
   // ══ HOMEPAGE SECTIONS ═══════════════════════════════════════════════════
   hero: {
-    eyebrow: { en: "✦ Al Ahsa · Mubarraz · Bright Specialized Clinics", ar: "✦ الأحساء · المبرّز · عيادات برايت التخصصية" },
-    headlinePartA: { en: "The Mubarraz clinic", ar: "العيادة التي" },
-    headlineEm: { en: "women trust first.", ar: "اختارتها سيدات المبرّز." },
+    eyebrow: { en: "Bright Al Ahsa · Mubarraz · Since 2025", ar: "برايت الأحساء · المبرّز · منذ ٢٠٢٥" },
+    headlinePartA: { en: "Specialty care,", ar: "رعاية تخصّصية،" },
+    headlineEm: { en: "closer to home.", ar: "أقرب لعوائلنا." },
     headlinePartB: { en: "", ar: "" },
-    leadItalic: { en: "Female-led. Discreet. Closer to home.", ar: "بقيادة طبيبة. سرّيّة. أقرب لكِ." },
-    lead: {
-      en: "Specialty dermatology, aesthetic care, cosmetic dentistry, OB/GYN, laser — under Dr. Wafaa Saeed on Khalid Ibn Al-Walid Street, Mubarraz. Women-only sessions on request. Same-day WhatsApp confirmation.",
-      ar: "جلدية تخصّصية، رعاية تجميلية، تجميل الأسنان، نساء وولادة، ليزر — تحت إشراف د. وفاء سعيد على شارع خالد بن الوليد بالمبرّز. جلسات نسائية فقط عند الطلب. تأكيد واتساب في نفس اليوم.",
-    },
+    leadItalic: { en: "", ar: "" },
+    lead: { en: "", ar: "" },
     primaryCta: { en: "Book on WhatsApp", ar: "احجزي عبر واتساب" },
     secondaryCta: { en: "Meet Dr. Wafaa", ar: "تعرّفي على د. وفاء" },
     pullQuote: { en: "\"She listened. She explained three options. Then she said the simplest one suited me best.\"", ar: "«أصغت. شرحت ثلاث خيارات. ثم قالت إنّ الأبسط هو الأنسب لي.»" },

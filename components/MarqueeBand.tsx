@@ -1,16 +1,17 @@
 import { clinicConfig } from "@/lib/clinic-config";
 
-export default function MarqueeBand({ dark = true }: { dark?: boolean }) {
+export default function MarqueeBand() {
   const items = [clinicConfig.marqueeStrip.line1.en, clinicConfig.marqueeStrip.line2.en];
   return (
     <div
       className="overflow-hidden"
       style={{
-        background: dark ? "#0a1f2e" : "#b29362",
-        color: "#ffffff",
+        background:
+          "linear-gradient(180deg, #f5efe1 0%, #ece5d4 100%)",
+        color: "#0a1f2e",
         padding: "20px 0",
-        borderTop: dark ? "1px solid #14283a" : "none",
-        borderBottom: dark ? "1px solid #14283a" : "none",
+        borderTop: "1px solid rgba(143, 117, 72, 0.18)",
+        borderBottom: "1px solid rgba(143, 117, 72, 0.18)",
       }}
     >
       <div
