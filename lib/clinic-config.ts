@@ -197,7 +197,7 @@ export const clinicConfig: ClinicConfig = {
   navigation: {
     items: [
       { key: "services", label: { en: "Services", ar: "الخدمات" }, href: "/services" },
-      { key: "doctors", label: { en: "Dr. Wafaa", ar: "د. وفاء" }, href: "/doctors" },
+      { key: "doctors", label: { en: "Our Clinicians", ar: "أطبّاؤنا" }, href: "/doctors" },
       { key: "gallery", label: { en: "Before & After", ar: "قبل وبعد" }, href: "/gallery" },
       { key: "trust", label: { en: "Trust", ar: "موثوقية" }, href: "/trust" },
       { key: "journal", label: { en: "Journal", ar: "المجلّة" }, href: "/journal" },
