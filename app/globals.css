@@ -511,6 +511,25 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
 }
 .fade-up { animation: fadeUp 700ms var(--ease-standard) both; }
 
+/* Footer social icons — circular hover with brand gold */
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: rgba(178, 147, 98, 0.08);
+  color: #8f7548;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-social-icon:hover {
+  background: #b29362;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(178, 147, 98, 0.24);
+}
+
 /* ═══════════════════════════════════════════════════════════════════════
    HERO VIDEO — full-width ambient background (Bright Al Ahsa signature)
    Drop bright-hero.mp4 + bright-hero-poster.jpg into /public/hero/

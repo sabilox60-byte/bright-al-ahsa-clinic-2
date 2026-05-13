@@ -196,9 +196,9 @@ export const clinicConfig: ClinicConfig = {
   },
   navigation: {
     items: [
-      { key: "services", label: { en: "Departments", ar: "الأقسام" }, href: "/services" },
-      { key: "doctors", label: { en: "Our Clinicians", ar: "أطبّاؤنا" }, href: "/doctors" },
-      { key: "branches", label: { en: "Branches", ar: "الفروع" }, href: "/about" },
+      { key: "services", label: { en: "Services", ar: "الخدمات" }, href: "/services" },
+      { key: "doctors", label: { en: "Dr. Wafaa", ar: "د. وفاء" }, href: "/doctors" },
+      { key: "gallery", label: { en: "Before & After", ar: "قبل وبعد" }, href: "/gallery" },
       { key: "trust", label: { en: "Trust", ar: "موثوقية" }, href: "/trust" },
       { key: "journal", label: { en: "Journal", ar: "المجلّة" }, href: "/journal" },
       { key: "contact", label: { en: "Contact", ar: "تواصل" }, href: "/booking" },
@@ -207,8 +207,8 @@ export const clinicConfig: ClinicConfig = {
   },
   footer: {
     tagline: {
-      en: "The Bright standard, closer to Hofuf and Mubarraz families. The Al Ahsa branch of Bright Specialized Clinics — opened 2025.",
-      ar: "معيار برايت، أقرب لعوائل الهفوف والمبرّز. فرع الأحساء من عيادات برايت التخصصية — افتُتح عام ٢٠٢٥.",
+      en: "Female-led specialty clinic on Khalid Ibn Al-Walid Street, Mubarraz. Bright Al Ahsa — opened January 2025. Women-only sessions on request.",
+      ar: "عيادة تخصّصية بقيادة طبيبة على شارع خالد بن الوليد بالمبرّز. برايت الأحساء — افتُتح في يناير ٢٠٢٥. جلسات نسائية فقط عند الطلب.",
     },
     chips: [
       { en: "MOH Licensed", ar: "مرخّصة من وزارة الصحة" },
@@ -253,23 +253,23 @@ export const clinicConfig: ClinicConfig = {
 
   // ══ HOMEPAGE SECTIONS ═══════════════════════════════════════════════════
   hero: {
-    eyebrow: { en: "✦ Al Ahsa · Mubarraz · Since 2025", ar: "✦ الأحساء · المبرّز · منذ ٢٠٢٥" },
-    headlinePartA: { en: "Bright comes", ar: "برايت تأتي" },
-    headlineEm: { en: "to Al Ahsa.", ar: "إلى الأحساء." },
+    eyebrow: { en: "✦ Al Ahsa · Mubarraz · Bright Specialized Clinics", ar: "✦ الأحساء · المبرّز · عيادات برايت التخصصية" },
+    headlinePartA: { en: "The Mubarraz clinic", ar: "العيادة التي" },
+    headlineEm: { en: "women trust first.", ar: "اختارتها سيدات المبرّز." },
     headlinePartB: { en: "", ar: "" },
-    leadItalic: { en: "The Bright standard. Closer to home.", ar: "معيار برايت. أقرب لعوائلنا." },
+    leadItalic: { en: "Female-led. Discreet. Closer to home.", ar: "بقيادة طبيبة. سرّيّة. أقرب لكِ." },
     lead: {
-      en: "Specialty dermatology, aesthetic care, cosmetic dentistry, OB/GYN, and more — on Khalid Ibn Al-Walid Street in Mubarraz. Led by Dr. Wafaa Saeed, with the full Bright clinical network behind her.",
-      ar: "جلدية تخصّصية، رعاية تجميلية، تجميل الأسنان، النساء والولادة، وأكثر — على شارع خالد بن الوليد بالمبرّز. بقيادة د. وفاء سعيد، يدعمها فريق برايت السريري كاملاً.",
+      en: "Specialty dermatology, aesthetic care, cosmetic dentistry, OB/GYN, laser — under Dr. Wafaa Saeed on Khalid Ibn Al-Walid Street, Mubarraz. Women-only sessions on request. Same-day WhatsApp confirmation.",
+      ar: "جلدية تخصّصية، رعاية تجميلية، تجميل الأسنان، نساء وولادة، ليزر — تحت إشراف د. وفاء سعيد على شارع خالد بن الوليد بالمبرّز. جلسات نسائية فقط عند الطلب. تأكيد واتساب في نفس اليوم.",
     },
     primaryCta: { en: "Book on WhatsApp", ar: "احجزي عبر واتساب" },
-    secondaryCta: { en: "Our departments", ar: "أقسامنا" },
-    pullQuote: { en: "\"They explained three options, then said the simplest one suited me best.\"", ar: "«شرحوا لي ثلاث خيارات، ثم قالوا إنّ الخيار الأبسط هو الأنسب لي.»" },
-    pullQuoteAttribution: { en: "Patient · Al Ahsa", ar: "مريضة · الأحساء" },
+    secondaryCta: { en: "Meet Dr. Wafaa", ar: "تعرّفي على د. وفاء" },
+    pullQuote: { en: "\"She listened. She explained three options. Then she said the simplest one suited me best.\"", ar: "«أصغت. شرحت ثلاث خيارات. ثم قالت إنّ الأبسط هو الأنسب لي.»" },
+    pullQuoteAttribution: { en: "Patient · Mubarraz", ar: "مريضة · المبرّز" },
     stats: [
-      { value: { en: "Since 2025", ar: "منذ ٢٠٢٥" }, label: { en: "Open in Mubarraz", ar: "نخدمكم في المبرّز" } },
-      { value: { en: "4.4 ★", ar: "٤٫٤ ★" }, label: { en: "Bright network 1,500+ reviews", ar: "أكثر من ١٬٥٠٠ تقييم لشبكة برايت" } },
-      { value: { en: "Bright network", ar: "شبكة برايت" }, label: { en: "Al Khobar specialists on call", ar: "أخصّائيو الخبر متاحون" } },
+      { value: { en: "Female-led", ar: "بقيادة طبيبة" }, label: { en: "Egyptian Fellowship Dermatology", ar: "زمالة مصرية في الجلدية" } },
+      { value: { en: "10+ services", ar: "+١٠ خدمات" }, label: { en: "Under one quiet roof", ar: "تحت سقفٍ هادئٍ واحد" } },
+      { value: { en: "Same-day", ar: "في يومكِ" }, label: { en: "WhatsApp confirmation", ar: "تأكيد واتساب" } },
     ],
   },
   marqueeStrip: {
@@ -283,16 +283,16 @@ export const clinicConfig: ClinicConfig = {
     headlineEm: { en: "around the patient.", ar: "حول المريضة." },
     paragraphs: [
       {
-        en: "Bright Specialized Clinics was founded in Al Khobar in 2018 with a single principle: treat every patient like the only patient. Ten specialty departments, six named clinicians, and 1,500+ patient reviews later — that promise still stands.",
-        ar: "تأسّست عيادات برايت التخصصية في الخبر عام ٢٠١٨ بمبدأٍ واحد: عاملي كل مريضة كأنّها المريضة الوحيدة. عشرة أقسام تخصّصية، ستة أطبّاء بأسمائهم، وأكثر من ١٬٥٠٠ تقييم لاحقاً — الوعد لا يزال قائماً.",
+        en: "Bright Al Ahsa was opened in January 2025 on Khalid Ibn Al-Walid Street in Mubarraz with a single principle: treat every patient like the only patient. The team works from the same operating principle that earned 1,500+ verified patient reviews across the Eastern Province — quiet rooms, named clinicians, written treatment plans, no rushed visits.",
+        ar: "افتُتح برايت الأحساء في يناير ٢٠٢٥ على شارع خالد بن الوليد بالمبرّز بمبدأٍ واحد: عاملي كل مريضة كأنّها المريضة الوحيدة. الفريق يعمل بنفس المبدأ الذي حصد أكثر من ١٬٥٠٠ تقييم موثَّق من المريضات في المنطقة الشرقية — غرفٌ هادئة، أطبّاء بأسمائهم، خطط علاج مكتوبة، لا زيارات معجَّلة.",
       },
       {
-        en: "In January 2025, Bright opened its Al Ahsa branch on Khalid Ibn Al-Walid Street in Mubarraz — to serve the families of Hofuf and Mubarraz with the same standard, closer to home. Led on-site by Dr. Wafaa Saeed, with the full Bright clinical network on call from the Khobar HQ.",
-        ar: "في يناير ٢٠٢٥، افتتحت برايت فرعها في الأحساء على شارع خالد بن الوليد بالمبرّز — لخدمة عوائل الهفوف والمبرّز بنفس المعيار، أقرب إلى الديار. تقود الفرع موقعياً د. وفاء سعيد، بدعم كامل من شبكة برايت السريرية في المركز الرئيسي بالخبر.",
+        en: "Dr. Wafaa Saeed leads our day-to-day clinical practice. Egyptian Fellowship-certified in dermatology. Known by her patients for one habit above all others — she listens before she prescribes, and writes the plan down before you leave the room.",
+        ar: "د. وفاء سعيد تقود ممارستنا السريرية اليومية. حاصلة على زمالة مصرية في الأمراض الجلدية. تعرفها مريضاتها بعادةٍ واحدة فوق كل شيء — تُصغي قبل أن تَصِف، وتكتب الخطّة قبل أن تغادري الغرفة.",
       },
     ],
-    name: "Mr. Manea El Manea",
-    role: { en: "General Manager · Bright Specialized Clinics", ar: "المدير العام · عيادات برايت التخصصية" },
+    name: "Dr. Wafaa Saeed",
+    role: { en: "Lead Dermatologist · Bright Al Ahsa", ar: "رئيسة الجلدية · برايت الأحساء" },
     cta: { en: "About our clinic", ar: "عن العيادة" },
   },
   services: {
@@ -339,14 +339,14 @@ export const clinicConfig: ClinicConfig = {
     pullQuote: { en: "The trusted name across the Eastern Province.", ar: "الاسم الموثوق في المنطقة الشرقية." },
     items: [
       {
-        quote: { en: "Bright in Mubarraz means I don't drive to Khobar anymore. Dr. Wafaa listened, explained three options, then recommended the simplest. Honest care.", ar: "برايت في المبرّز يعني أنّي لم أعد أقود إلى الخبر. د. وفاء أصغت، شرحت ثلاث خيارات، ثم أوصت بالأبسط. رعاية صادقة." },
-        name: { en: "Patient · Al Ahsa", ar: "مريضة · الأحساء" },
-        role: { en: "Filler with Dr. Wafaa", ar: "فيلر مع د. وفاء" },
+        quote: { en: "She listened first. Explained three options. Then told me the simplest one suited me best. No upsell, no rush — and the result is exactly what we discussed.", ar: "أصغت أوّلاً. شرحت ثلاث خيارات. ثم قالت إنّ الأبسط هو الأنسب لي. بلا بيع، بلا استعجال — والنتيجة تماماً كما اتّفقنا." },
+        name: { en: "Patient · Mubarraz", ar: "مريضة · المبرّز" },
+        role: { en: "Full-face filler with Dr. Wafaa", ar: "فيلر وجه كامل مع د. وفاء" },
         variant: "terracotta",
       },
       {
-        quote: { en: "My mother came with me to the first visit. By the third, she had booked her own — Mubarraz now has the standard we used to drive to Khobar for.", ar: "أمّي أتت معي في الزيارة الأولى. وفي الثالثة، حجزت موعدها الخاص — المبرّز الآن لديها المعيار الذي كنّا نقود إلى الخبر من أجله." },
-        name: { en: "Patient · Al Mubarraz", ar: "مريضة · المبرّز" },
+        quote: { en: "Booked a women-only session by WhatsApp. The room was quiet, the team was all women. My mother came to the next visit on her own.", ar: "حجزتُ جلسة نسائية فقط عبر واتساب. الغرفة كانت هادئة، الفريق كان نسائياً بالكامل. أمّي أتت بنفسها في الزيارة التالية." },
+        name: { en: "Patient · Hofuf", ar: "مريضة · الهفوف" },
         role: { en: "Hydrafacial with Dr. Wafaa", ar: "هيدرافيشيال مع د. وفاء" },
         variant: "sage",
       },
@@ -354,13 +354,13 @@ export const clinicConfig: ClinicConfig = {
     cta: { en: "Read all reviews", ar: "اقرئي كل الآراء" },
   },
   team: {
-    eyebrow: { en: "✦ Our clinicians", ar: "✦ أطبّاؤنا" },
-    headlinePartA: { en: "Named clinicians.", ar: "أطبّاء بأسمائهم." },
-    headlineEm: { en: "Verifiable credentials.", ar: "شهاداتٌ قابلة للتحقّق." },
+    eyebrow: { en: "✦ The Mubarraz team", ar: "✦ فريق المبرّز" },
+    headlinePartA: { en: "Female-led care.", ar: "رعاية بقيادة طبيبة." },
+    headlineEm: { en: "Discreet by default.", ar: "سرّيّة كافتراضٍ أوّل." },
     items: [
-      { name: "Dr. Wafaa Saeed", tag: { en: "Dermatology · Al Ahsa branch lead", ar: "الجلدية · رئيسة فرع الأحساء" }, variant: "terracotta" },
-      { name: "Dr. Marina Naddaf", tag: { en: "Senior Dermatology · Bright Network · AAD since 2004", ar: "الجلدية · شبكة برايت · الأكاديمية الأمريكية منذ ٢٠٠٤" }, variant: "sand" },
-      { name: "Dr. Hassan Nazzal", tag: { en: "Maxillofacial Surgery · Bright Network · RCSI Fellowship", ar: "جراحة الفم والوجه · شبكة برايت · زمالة الكلية الملكية أيرلندا" }, variant: "sage" },
+      { name: "Dr. Wafaa Saeed", tag: { en: "Lead Dermatologist · Egyptian Fellowship", ar: "رئيسة الجلدية · زمالة مصرية" }, variant: "terracotta" },
+      { name: "The Women's Studio", tag: { en: "Hydrafacial · Laser · Plasma · Aesthetic care", ar: "هيدرافيشيال · ليزر · بلازما · رعاية تجميلية" }, variant: "sand" },
+      { name: "Women-Only Concierge", tag: { en: "Bookings · Family scheduling · Modesty by default", ar: "حجوزات · مواعيد العائلة · سرّيّةٌ أصيلة" }, variant: "sage" },
     ],
   },
   bookCta: {
@@ -401,17 +401,17 @@ export const clinicConfig: ClinicConfig = {
   departmentsPage: {
     hero: {
       roman: "I",
-      eyebrow: { en: "✦ Departments at Al Ahsa", ar: "✦ الأقسام في فرع الأحساء" },
+      eyebrow: { en: "✦ Departments at Al Ahsa", ar: "✦ الأقسام في الأحساء" },
       title: { en: "Specialty care,", ar: "رعاية تخصّصية،" },
       titleEm: { en: "closer to Mubarraz.", ar: "أقرب إلى المبرّز." },
-      sub: { en: "Bright's Al Ahsa branch offers dermatology, aesthetic care, cosmetic dentistry, OB/GYN, and family care on-site. For specialty surgery and procedures not listed below, Bright Network senior specialists schedule visits from the Khobar HQ.", ar: "فرع برايت بالأحساء يقدّم الجلدية والرعاية التجميلية وتجميل الأسنان والنساء والولادة ورعاية العائلة موقعياً. وللإجراءات الجراحية التخصّصية غير المذكورة أدناه، يُجدول أخصّائيو شبكة برايت الكبار زياراتهم من المركز الرئيسي بالخبر." },
+      sub: { en: "Dermatology, aesthetic care, cosmetic dentistry, OB/GYN, laser, and family care — under one quiet roof on Khalid Ibn Al-Walid Street. Women-only sessions on request.", ar: "الجلدية، الرعاية التجميلية، تجميل الأسنان، النساء والولادة، الليزر، ورعاية العائلة — تحت سقفٍ هادئٍ واحد على شارع خالد بن الوليد. جلسات نسائية فقط عند الطلب." },
     },
     items: [
       {
         num: "I",
         name: { en: "Department I — Dermatology & Laser", ar: "القسم الأوّل — الجلدية والليزر" },
-        sub: { en: "Skin science under Dr. Marina Naddaf", ar: "علم البشرة تحت إشراف د. مارينا نداف" },
-        blurb: { en: "Medical and cosmetic dermatology led by Dr. Marina Naddaf — AAD member since 2004, Canadian Laser Diploma, twenty-five years across the Gulf. Restrained protocols that age gracefully.", ar: "الجلدية الطبّية والتجميلية بقيادة د. مارينا نداف — عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤، دبلوم الليزر الكندي، خمسة وعشرون عاماً في الخليج. بروتوكولات معتدلة تشيخ بكرامة." },
+        sub: { en: "Skin science under Dr. Wafaa Saeed", ar: "علم البشرة تحت إشراف د. وفاء سعيد" },
+        blurb: { en: "Medical and cosmetic dermatology led by Dr. Wafaa Saeed — Egyptian Fellowship in dermatology. Restrained, written protocols that age gracefully. Every plan documented before you leave the room.", ar: "الجلدية الطبّية والتجميلية بقيادة د. وفاء سعيد — زمالة مصرية في الأمراض الجلدية. بروتوكولات مكتوبة معتدلة تشيخ بكرامة. كل خطّة موثَّقة قبل أن تغادري الغرفة." },
         treatments: [
           { en: "Hydrafacial", ar: "هيدرافيشيال" },
           { en: "Laser Hair Removal", ar: "إزالة الشعر بالليزر" },
@@ -429,8 +429,8 @@ export const clinicConfig: ClinicConfig = {
       {
         num: "II",
         name: { en: "Department II — Plastic & Aesthetic Surgery", ar: "القسم الثاني — جراحة التجميل" },
-        sub: { en: "Maxillofacial under Dr. Hassan Nazzal", ar: "الفم والوجه تحت إشراف د. حسن نزال" },
-        blurb: { en: "Aesthetic and reconstructive surgery led by Dr. Hassan Nazzal — Jordanian Board, Royal College of Surgeons in Ireland Fellowship. Restraint and proportion over volume.", ar: "جراحة التجميل والترميم بقيادة د. حسن نزال — المجلس الأردني، زمالة الكلية الملكية للجرّاحين في أيرلندا. الاعتدال والتناسق فوق الحجم." },
+        sub: { en: "Non-surgical aesthetic procedures", ar: "إجراءات تجميلية غير جراحية" },
+        blurb: { en: "Filler, Botox, thread lift, and non-surgical face contouring — all under Dr. Wafaa's supervision. Restraint over volume; proportion over trend. For surgical procedures, scheduled by appointment.", ar: "فيلر، بوتوكس، شدّ بالخيوط، ونحت الوجه غير الجراحي — كلّها تحت إشراف د. وفاء. الاعتدال فوق الحجم؛ التناسق فوق الموضة. للإجراءات الجراحية، تُحدَّد بالموعد." },
         treatments: [
           { en: "Full-face Filler", ar: "فيلر الوجه الكامل" },
           { en: "Lip Filler", ar: "فيلر الشفاه" },
@@ -466,7 +466,7 @@ export const clinicConfig: ClinicConfig = {
         num: "IV",
         name: { en: "Department IV — OB/GYN & Women's Health", ar: "القسم الرابع — النساء والولادة وصحّة المرأة" },
         sub: { en: "Discreet, women-only consultations", ar: "استشارات نسائية بسرّية تامّة" },
-        blurb: { en: "Gynecology, intimate health, and women's wellness — initial consultations on-site with Dr. Wafaa Saeed, with Bright Network senior OB/GYN consultants available by scheduled visit from the Khobar HQ. Female-only sessions available on request — WhatsApp 0557337555.", ar: "أمراض النساء والولادة والصحّة الحميمة وعافية المرأة — الاستشارات الأوّلية موقعياً مع د. وفاء سعيد، مع توفّر استشاريات نساء وولادة من شبكة برايت بزيارات مجدولة من المركز الرئيسي بالخبر. جلسات نسائية فقط متاحة عند الطلب — واتساب ٠٥٥٧٣٣٧٥٥٥." },
+        blurb: { en: "Women's health consultations in a fully discreet, women-only environment. Dermatology, intimate skin care, and aesthetic protocols designed for women — booked via WhatsApp 0557337555.", ar: "استشارات صحّة المرأة في بيئة نسائية تماماً وسرّية. الجلدية، العناية الحميمة بالبشرة، والبروتوكولات التجميلية المصمَّمة للنساء — الحجز عبر واتساب ٠٥٥٧٣٣٧٥٥٥." },
         treatments: [
           { en: "Gynecological consultation", ar: "استشارة نسائية" },
           { en: "Intimate health treatments", ar: "علاجات الصحّة الحميمة" },
@@ -559,7 +559,7 @@ export const clinicConfig: ClinicConfig = {
       { name: "Hydrafacial system", description: { en: "Three-step facial protocol — cleanse, extract, hydrate.", ar: "بروتوكول وجه من ثلاث مراحل — تنظيف، استخراج، ترطيب." } },
       { name: "RF / Ultrasound body contouring", description: { en: "Non-invasive body shaping for face and body.", ar: "نحت غير جراحي للوجه والجسم." } },
       { name: "Chair-side teeth-whitening unit", description: { en: "In-clinic whitening with same-day results.", ar: "تبييض في العيادة بنتائج في نفس اليوم." } },
-      { name: "Maxillofacial surgical suite", description: { en: "Full surgical setup for Dr. Hassan Nazzal's procedures.", ar: "غرفة جراحية كاملة لإجراءات د. حسن نزال." } },
+      { name: "Treatment room — women-only configuration", description: { en: "Private aesthetic treatment room with women-only staffing on request.", ar: "غرفة علاج تجميلي خاصّة بفريقٍ نسائيٍ كامل عند الطلب." } },
     ],
     bookCta: {
       headline: { en: "Not sure which department fits?", ar: "غير متأكّدة أي قسم يناسبك؟" },
@@ -570,32 +570,18 @@ export const clinicConfig: ClinicConfig = {
   doctorsPage: {
     hero: {
       roman: "I",
-      eyebrow: { en: "✦ Al Ahsa Clinicians", ar: "✦ أطبّاء فرع الأحساء" },
-      title: { en: "Named clinicians.", ar: "أطبّاءٌ بأسمائهم." },
-      titleEm: { en: "Verifiable credentials.", ar: "شهاداتٌ قابلة للتحقّق." },
-      sub: { en: "Led on-site by Dr. Wafaa Saeed, with the Bright Network's six senior specialists on call from the Khobar HQ for any procedure beyond the branch's daily scope.", ar: "بقيادة د. وفاء سعيد موقعياً، مع شبكة برايت بستّة أخصّائيين كبار جاهزين من المركز الرئيسي بالخبر لأي إجراء يتجاوز نطاق الفرع اليومي." },
+      eyebrow: { en: "✦ Bright Al Ahsa Clinical Team", ar: "✦ فريق برايت الأحساء السريري" },
+      title: { en: "Female-led.", ar: "بقيادة طبيبة." },
+      titleEm: { en: "Named. Verifiable.", ar: "بالاسم. قابلة للتحقّق." },
+      sub: { en: "Dr. Wafaa Saeed leads our day-to-day clinical practice on Khalid Ibn Al-Walid Street. Egyptian Fellowship-certified in dermatology. Known by her patients for one habit above all others: she listens before she prescribes, and writes the plan down before you leave the room.", ar: "د. وفاء سعيد تقود ممارستنا السريرية اليومية على شارع خالد بن الوليد. حاصلة على زمالة مصرية في الأمراض الجلدية. تعرفها مريضاتها بعادةٍ واحدة فوق كل شيء: تُصغي قبل أن تَصِف، وتكتب الخطّة قبل أن تغادري الغرفة." },
     },
     items: [
       {
         name: "Dr. Wafaa Saeed",
-        role: { en: "Al Ahsa Branch Lead · Dermatology", ar: "رئيسة فرع الأحساء · الجلدية" },
-        bio: { en: "Egyptian Fellowship-certified dermatologist. Leads the Al Ahsa branch as its primary on-site clinician since opening day in January 2025. Specialises in full-face aesthetic protocols and conservative anti-aging care.", ar: "طبيبة جلدية بزمالة مصرية. تقود فرع الأحساء كطبيبته الرئيسية موقعياً منذ افتتاحه في يناير ٢٠٢٥. متخصّصة في بروتوكولات تجميل الوجه الكامل والعناية المعتدلة بمكافحة الشيخوخة." },
-        credentials: ["MD · Egyptian Fellowship Dermatology", "Al Ahsa branch lead since 2025"],
+        role: { en: "Lead Dermatologist · Bright Al Ahsa", ar: "رئيسة الجلدية · برايت الأحساء" },
+        bio: { en: "Egyptian Fellowship-certified dermatologist. Leads the Bright Al Ahsa clinic since opening day in January 2025. Specialises in restrained, written aesthetic protocols — full-face filler design, Hydrafacial regimens, Hydra-Botox combinations, and conservative anti-aging care. Trained on the Cairo school of dermatology and developed a Khaleeji-tailored approach to skin care in her years across the Gulf. Every consultation ends with a written plan you take home — never a verbal upsell.", ar: "طبيبة جلدية حاصلة على زمالة مصرية. تقود عيادة برايت الأحساء منذ افتتاحها في يناير ٢٠٢٥. متخصّصة في بروتوكولات تجميل مكتوبة ومعتدلة — تصميم فيلر الوجه الكامل، أنظمة الهيدرافيشيال، تركيبات الهيدرا-بوتوكس، والعناية المعتدلة بمكافحة الشيخوخة. تدرّبت على مدرسة القاهرة في الجلدية وطوّرت مقاربة خليجية لرعاية البشرة عبر سنواتها في الخليج. كل استشارة تنتهي بخطّة مكتوبة تأخذينها معكِ — أبداً بيع شفويّ." },
+        credentials: ["MD · Egyptian Fellowship in Dermatology", "Cairo School of Dermatology — clinical training", "Bright Al Ahsa Lead since January 2025", "Female-only session protocol on request"],
         variant: "terracotta",
-      },
-      {
-        name: "Dr. Marina Naddaf",
-        role: { en: "Bright Network · Senior Dermatology", ar: "شبكة برايت · الجلدية" },
-        bio: { en: "Available for Al Ahsa patients by scheduled visit from the Khobar HQ. AAD member since 2004, Canadian Laser Diploma, twenty-five years of patient care across the Gulf — quiet results, never theatrical.", ar: "متاحة لمريضات الأحساء بزيارات مجدولة من المركز الرئيسي بالخبر. عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤، دبلوم الليزر الكندي، خمسة وعشرون عاماً من العناية بالمريضات في الخليج — نتائج هادئة، بلا مبالغة." },
-        credentials: ["MD · MSc Dermatology", "AAD member since 2004", "Canadian Laser Diploma", "Visits Al Ahsa monthly"],
-        variant: "sand",
-      },
-      {
-        name: "Dr. Hassan Nazzal",
-        role: { en: "Bright Network · Maxillofacial Surgery", ar: "شبكة برايت · جراحة الفم والوجه" },
-        bio: { en: "Jordanian Board–certified maxillofacial surgeon with Fellowship from the Royal College of Surgeons in Ireland. Senior partner of Bright Specialized Clinics. Available for Al Ahsa patients by scheduled consultation; complex procedures performed at the Khobar HQ surgical suite.", ar: "جرّاح فم ووجه وفكّين معتمَد من المجلس الأردني، حاصل على زمالة الكلية الملكية للجرّاحين في أيرلندا. الشريك الأوّل في عيادات برايت التخصصية. متاح لمريضات الأحساء باستشارات مجدولة؛ الإجراءات المعقّدة تُجرى في غرفة الجراحة بالمركز الرئيسي بالخبر." },
-        credentials: ["MD · Jordanian Board of Maxillofacial Surgery", "FRCS · Royal College of Surgeons in Ireland", "Senior partner · Bright Specialized Clinics"],
-        variant: "sage",
       },
     ],
   },
@@ -604,27 +590,27 @@ export const clinicConfig: ClinicConfig = {
     hero: {
       roman: "I",
       eyebrow: { en: "✦ About Bright Al Ahsa", ar: "✦ عن برايت الأحساء" },
-      title: { en: "Bright comes", ar: "برايت تأتي" },
-      titleEm: { en: "to Al Ahsa.", ar: "إلى الأحساء." },
-      sub: { en: "The Al Ahsa branch of Bright Specialized Clinics — opened January 2025 on Khalid Ibn Al-Walid Street in Mubarraz. Led on-site by Dr. Wafaa Saeed, with the full Bright Network behind her.", ar: "فرع الأحساء من عيادات برايت التخصصية — افتُتح في يناير ٢٠٢٥ على شارع خالد بن الوليد بالمبرّز. تقود الفرع موقعياً د. وفاء سعيد، بدعم شبكة برايت الكاملة." },
+      title: { en: "The Mubarraz clinic", ar: "العيادة" },
+      titleEm: { en: "women trust first.", ar: "التي اختارتها سيدات المبرّز." },
+      sub: { en: "Bright Al Ahsa opened in January 2025 on Khalid Ibn Al-Walid Street in Mubarraz — a quiet, female-led specialty clinic for the women of Al Ahsa. Led on-site by Dr. Wafaa Saeed.", ar: "افتُتح برايت الأحساء في يناير ٢٠٢٥ على شارع خالد بن الوليد بالمبرّز — عيادة تخصّصية هادئة بقيادة طبيبة لنساء الأحساء. تقودها موقعياً د. وفاء سعيد." },
     },
     chapters: [
-      { n: "I", title: { en: "Khobar, 2018 — where we started", ar: "الخبر، ٢٠١٨ — حيث بدأنا" }, body: { en: "Bright Specialized Clinics was founded on Prince Faisal Bin Fahd Road, Al Hada district, Al Khobar — with a single operational principle: treat every patient as if she were the only patient. The first department was dermatology, under Dr. Marina Naddaf, AAD member since 2004.", ar: "تأسّست عيادات برايت التخصصية في شارع الأمير فيصل بن فهد بحي الهدا، الخبر — بمبدأٍ تشغيليّ واحد: عاملي كل مريضة كأنّها المريضة الوحيدة. القسم الأوّل كان الجلدية، تحت إشراف د. مارينا نداف، عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤." }, variant: "sand" },
-      { n: "II", title: { en: "Ten departments grew", ar: "عشرة أقسام نمت" }, body: { en: "Over seven years, the clinic expanded into ten specialty departments — dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric, day surgery, laser, interventional radiology, and psychiatry. Dr. Hassan Nazzal joined as senior partner, bringing his RCSI Fellowship to the maxillofacial wing.", ar: "على مدى سبع سنوات، توسّعت العيادة لتشمل عشرة أقسام تخصّصية — الجلدية، التجميل، الأسنان، النساء والولادة، الأطفال، السمنة، الجراحة اليومية، الليزر، الأشعّة التداخلية، الطب النفسي. د. حسن نزال انضمّ شريكاً أوّل بزمالته من الكلية الملكية للجرّاحين أيرلندا." }, variant: "terracotta" },
-      { n: "III", title: { en: "Al Ahsa, January 2025", ar: "الأحساء، يناير ٢٠٢٥" }, body: { en: "In January 2025, Bright opened its Al Ahsa branch on Khalid Ibn Al-Walid Street in Mubarraz — under the clinical leadership of Dr. Wafaa Saeed. The promise: the same Bright standard, closer to the families of Hofuf and Mubarraz. No more two-hour drives to Khobar for a Hydrafacial or a dermatology consultation.", ar: "في يناير ٢٠٢٥، افتتحت برايت فرعها بالأحساء على شارع خالد بن الوليد بالمبرّز — تحت إشراف د. وفاء سعيد سريرياً. الوعد: نفس معيار برايت، أقرب لعوائل الهفوف والمبرّز. لا مزيد من قيادة ساعتين إلى الخبر للهيدرافيشيال أو لاستشارة الجلدية." }, variant: "sage" },
-      { n: "IV", title: { en: "What stays the same", ar: "ما يبقى ثابتاً" }, body: { en: "Same Bright standard, same six named clinicians on the network, same clinical philosophy. The Al Ahsa branch operates to the same daily protocols as the Khobar HQ. For procedures beyond the branch's scope, Dr. Wafaa schedules a visit with the senior specialist or refers to Khobar — never to a third party.", ar: "نفس معيار برايت، نفس ستّة الأطبّاء بأسمائهم على الشبكة، نفس الفلسفة السريرية. فرع الأحساء يعمل بنفس البروتوكولات اليومية للمركز الرئيسي بالخبر. للإجراءات التي تتجاوز نطاق الفرع، تُجدول د. وفاء زيارة مع الأخصّائي الكبير أو تُحيل إلى الخبر — أبداً لطرف ثالث." }, variant: "dark" },
+      { n: "I", title: { en: "Why we opened in Mubarraz", ar: "لماذا افتتحنا في المبرّز" }, body: { en: "Women in Al Ahsa told us the same thing: for a serious dermatology consultation or a properly designed full-face filler, the standard required a two-hour drive. So we brought the standard to Mubarraz instead — opened January 2025 on Khalid Ibn Al-Walid Street, women-led from day one.", ar: "أخبرتنا نساء الأحساء بالشيء نفسه: لاستشارة جلدية جدّية أو فيلر وجه كامل مصمَّم بإتقان، المعيار يتطلّب قيادة ساعتين. فأتينا بالمعيار إلى المبرّز بدلاً من ذلك — افتُتح في يناير ٢٠٢٥ على شارع خالد بن الوليد، بقيادة نسائية منذ اليوم الأوّل." }, variant: "sand" },
+      { n: "II", title: { en: "Female-led, by design", ar: "بقيادة نسائية، بالتصميم" }, body: { en: "Dr. Wafaa Saeed runs the day-to-day clinical practice — Egyptian Fellowship in dermatology, restrained-by-default protocols, every plan written down before you leave the room. Around her: a women-only operations team for any patient who requests one.", ar: "تُدير د. وفاء سعيد الممارسة السريرية اليومية — زمالة مصرية في الجلدية، بروتوكولات معتدلة بالتصميم، كل خطّة مكتوبة قبل أن تغادري الغرفة. ومن حولها: فريق تشغيليّ نسائي بالكامل لأي مريضة تطلب ذلك." }, variant: "terracotta" },
+      { n: "III", title: { en: "Saudi privacy as default", ar: "الخصوصية السعودية كافتراضٍ أوّل" }, body: { en: "No patient face photographs anywhere — on the website, in WhatsApp, on the gallery. Anonymous inquiry option on the booking form. PDPL-compliant data handling. Modesty isn't a feature; it's the default.", ar: "لا صور وجوه مريضات في أيّ مكان — على الموقع، على واتساب، في المعرض. خيار استفسار مجهول الهوية في نموذج الحجز. تعامل مع البيانات متوافق مع قانون حماية البيانات الشخصية. الستر ليس ميزة، بل افتراض أساسي." }, variant: "sage" },
+      { n: "IV", title: { en: "What you can expect", ar: "ما يمكنكِ توقّعه" }, body: { en: "Quiet rooms. Long consultations. Written plans. No pressure to book a procedure on the first visit. Same-day WhatsApp confirmation. Tabby and Tamara accepted for treatments inside the SAMA cap. Saturday – Thursday 9 AM – 11 PM; Friday after Asr.", ar: "غرفٌ هادئة. استشارات طويلة. خطط مكتوبة. لا ضغطٌ لحجز إجراء في الزيارة الأولى. تأكيد عبر واتساب في نفس اليوم. تابي وتمارا مقبولان للعلاجات ضمن سقف ساما. السبت – الخميس ٩ صباحاً – ١١ مساءً؛ الجمعة بعد العصر." }, variant: "dark" },
     ],
     commitments: [
-      { n: "I", title: { en: "Specialist-led", ar: "بإشراف الأخصّائيين" }, description: { en: "On-site every day: Dr. Wafaa Saeed, Egyptian Fellowship-certified dermatologist. On call: the Bright Network's senior specialists.", ar: "موقعياً كل يوم: د. وفاء سعيد، طبيبة جلدية بزمالة مصرية. على الاتّصال: أخصّائيو شبكة برايت الكبار." } },
-      { n: "II", title: { en: "Verifiable credentials", ar: "شهادات قابلة للتحقّق" }, description: { en: "Every credential we display is independently checkable through the issuing authority — RCSI, AAD, SCFHS, SFDA.", ar: "كل شهادة نعرضها قابلة للتحقّق المستقل عبر الجهة المُصدِرة — RCSI، AAD، الهيئة السعودية للتخصّصات الصحية، الهيئة العامة للغذاء والدواء." } },
+      { n: "I", title: { en: "Female-led", ar: "بقيادة طبيبة" }, description: { en: "On-site every day: Dr. Wafaa Saeed, Egyptian Fellowship-certified dermatologist. Women-only operations team available on request.", ar: "موقعياً كل يوم: د. وفاء سعيد، طبيبة جلدية بزمالة مصرية. فريق تشغيليّ نسائيّ بالكامل عند الطلب." } },
+      { n: "II", title: { en: "Verifiable credentials", ar: "شهادات قابلة للتحقّق" }, description: { en: "Every credential we display is independently checkable through the issuing authority — SCFHS, SFDA, and the dermatology fellowship registry.", ar: "كل شهادة نعرضها قابلة للتحقّق المستقل عبر الجهة المُصدِرة — الهيئة السعودية للتخصّصات الصحية، الهيئة العامة للغذاء والدواء، وسجلّ زمالات الجلدية." } },
       { n: "III", title: { en: "Saudi privacy first", ar: "الخصوصية السعودية أولاً" }, description: { en: "No patient face photographs. No biometric data. Female-only sessions on request. PDPL-compliant data handling.", ar: "لا صور وجوه مريضات. لا بيانات حيوية. جلسات نسائية فقط عند الطلب. تعامل مع البيانات متوافق مع قانون حماية البيانات الشخصية." } },
-      { n: "IV", title: { en: "Network referral when needed", ar: "إحالة داخل الشبكة عند اللزوم" }, description: { en: "For complex surgical procedures beyond the Al Ahsa branch's daily scope, Dr. Wafaa coordinates a Khobar HQ visit — the patient stays inside Bright's clinical network from first consultation to follow-up.", ar: "للإجراءات الجراحية المعقّدة التي تتجاوز النطاق اليومي لفرع الأحساء، تُنسّق د. وفاء زيارة للمركز الرئيسي بالخبر — تبقى المريضة داخل شبكة برايت السريرية من أوّل استشارة إلى المتابعة." } },
+      { n: "IV", title: { en: "Restraint over volume", ar: "الاعتدال فوق الحجم" }, description: { en: "Conservative protocols. Written plans before any procedure. No upsell on the first visit. Quiet results that age gracefully — never theatrical.", ar: "بروتوكولات معتدلة. خطط مكتوبة قبل أي إجراء. لا بيع في الزيارة الأولى. نتائج هادئة تشيخ بكرامة — أبداً مبالغ فيها." } },
     ],
     location: {
-      eyebrow: { en: "✦ Visit our Al Ahsa branch", ar: "✦ زورونا في فرع الأحساء" },
+      eyebrow: { en: "✦ Visit Bright Al Ahsa", ar: "✦ زورونا في برايت الأحساء" },
       headlinePartA: { en: "Khalid Ibn Al-Walid St.", ar: "شارع خالد بن الوليد." },
       headlineEm: { en: "Al Mubarraz.", ar: "المبرّز." },
-      description: { en: "Khalid Ibn Al-Walid Street, Al Mubarraz, Al Ahsa. Dedicated patient parking on site. Direct line 0502022292 · WhatsApp 0557337555 (Bright network) · Same-day confirmation during business hours.", ar: "شارع خالد بن الوليد، المبرّز، الأحساء. مواقف خاصة بالمراجعين داخل المجمّع. الخط المباشر ٠٥٠٢٠٢٢٢٩٢ · واتساب ٠٥٥٧٣٣٧٥٥٥ (شبكة برايت) · تأكيد في نفس اليوم خلال ساعات العمل." },
+      description: { en: "Khalid Ibn Al-Walid Street, Al Mubarraz, Al Ahsa. Dedicated patient parking on site. Direct line 0502022292 · WhatsApp 0557337555 · Same-day confirmation during business hours.", ar: "شارع خالد بن الوليد، المبرّز، الأحساء. مواقف خاصة بالمراجعين داخل المجمّع. الخط المباشر ٠٥٠٢٠٢٢٢٩٢ · واتساب ٠٥٥٧٣٣٧٥٥٥ · تأكيد في نفس اليوم خلال ساعات العمل." },
     },
   },
 
@@ -670,8 +656,8 @@ export const clinicConfig: ClinicConfig = {
     items: [
       { shortQuote: { en: "\"Dr. Wafaa explained three options, then said the simplest one suited me best.\"", ar: "«د. وفاء شرحت لي ثلاث خيارات، ثم قالت إنّ الأبسط هو الأنسب.»" }, longQuote: { en: "No upsell, no pressure. Dr. Wafaa walked me through three filler approaches at the Mubarraz branch, then recommended the most conservative one. Six weeks later my husband noticed I 'looked rested' — that's the whole point.", ar: "لا بيع، لا ضغط. د. وفاء شرحت لي ثلاثة أساليب للفيلر في فرع المبرّز، ثم اقترحت الأكثر اعتدالاً. بعد ستة أسابيع لاحظ زوجي أنّي «أبدو مرتاحة» — هذا هو الهدف كلّه." }, name: "Patient · Al Ahsa", date: { en: "Apr 2026", ar: "أبريل ٢٠٢٦" }, variant: "terracotta", stars: 5 },
       { shortQuote: { en: "\"My mother came with me, then she booked for herself.\"", ar: "«أمّي أتت معي، ثم حجزت موعدها.»" }, longQuote: { en: "First visit was for me — Hydrafacial with Dr. Wafaa at the Mubarraz branch. By my third visit my mother had her own appointment. We're now three patients from the same family, all here in Al Ahsa.", ar: "الزيارة الأولى كانت لي — هيدرافيشيال مع د. وفاء في فرع المبرّز. بحلول زيارتي الثالثة كانت أمّي قد حجزت موعدها. أصبحنا الآن ثلاث مريضات من نفس العائلة، كلّنا هنا في الأحساء." }, name: "Patient · Al Mubarraz", date: { en: "Mar 2026", ar: "مارس ٢٠٢٦" }, variant: "sage", stars: 5 },
-      { shortQuote: { en: "\"No more driving to Khobar for a dermatology visit.\"", ar: "«لا مزيد من القيادة إلى الخبر لزيارة جلدية.»" }, longQuote: { en: "Before Bright opened in Mubarraz, my mother and I used to drive two hours each way to Khobar for dermatology. Now Dr. Wafaa is fifteen minutes from our house. Same standard, half the day saved.", ar: "قبل افتتاح برايت بالمبرّز، كنّا أنا ووالدتي نقود ساعتين ذهاباً مثلهما إياباً إلى الخبر للجلدية. الآن د. وفاء على بعد خمس عشرة دقيقة من بيتنا. نفس المعيار، نصف اليوم وفّرناه." }, name: "Patient · Hofuf", date: { en: "Feb 2026", ar: "فبراير ٢٠٢٦" }, variant: "sand", stars: 5 },
-      { shortQuote: { en: "\"Dr. Marina came from Khobar — best of both worlds.\"", ar: "«د. مارينا جاءت من الخبر — أفضل ما في الفرعين.»" }, longQuote: { en: "I needed a senior laser consultation that wasn't available locally. Dr. Wafaa scheduled Dr. Marina's monthly Al Ahsa visit and I saw her here in Mubarraz. Two senior dermatologists, one network, no compromise.", ar: "احتجت استشارة ليزر تخصّصية لم تكن متاحة محلياً. د. وفاء جدولت زيارة د. مارينا الشهرية للأحساء ورأيتها هنا في المبرّز. طبيبتان جلديتان كبيرتان، شبكة واحدة، لا مساومة." }, name: "Patient · Al Mubarraz", date: { en: "Jan 2026", ar: "يناير ٢٠٢٦" }, variant: "terracotta", stars: 5 },
+      { shortQuote: { en: "\"Fifteen minutes from our house — that changed everything.\"", ar: "«خمس عشرة دقيقة من بيتنا — هذا غيّر كل شيء.»" }, longQuote: { en: "I used to drive two hours each way for a proper dermatology consultation. Now Dr. Wafaa is fifteen minutes from our house in Mubarraz. Same clinical care, half the day saved. My skincare routine actually became sustainable.", ar: "كنتُ أقود ساعتين ذهاباً ومثلهما إياباً لاستشارة جلدية جدّية. الآن د. وفاء على بعد خمس عشرة دقيقة من بيتنا في المبرّز. نفس الرعاية السريرية، نصف اليوم وفّرناه. روتين العناية بالبشرة أصبح مستداماً فعلاً." }, name: "Patient · Hofuf", date: { en: "Feb 2026", ar: "فبراير ٢٠٢٦" }, variant: "sand", stars: 5 },
+      { shortQuote: { en: "\"She wrote the plan down. I still have the paper.\"", ar: "«كتبت الخطّة. ما زلت أحتفظ بالورقة.»" }, longQuote: { en: "After three years of clinics trying to sell me filler I didn't need, Dr. Wafaa did the opposite — she explained why I should wait six months on one area, and only treat another. Wrote the whole plan down. I still have it.", ar: "بعد ثلاث سنوات من عيادات تحاول بيعي فيلر لا أحتاجه، فعلت د. وفاء العكس — شرحت لي لماذا يجب أن أنتظر ستّة أشهر في منطقة، وأعالج فقط منطقة أخرى. كتبت الخطّة كاملةً. ما زلت أحتفظ بها." }, name: "Patient · Al Mubarraz", date: { en: "Jan 2026", ar: "يناير ٢٠٢٦" }, variant: "terracotta", stars: 5 },
       { shortQuote: { en: "\"They accept Tabby — that mattered.\"", ar: "«يقبلون تابي — هذا فرّق معي.»" }, longQuote: { en: "Full Hollywood Smile would have been impossible to budget in one payment. The Mubarraz coordinator quietly mentioned Tabby and Tamara, both within the SAR 10K cap. Made everything possible.", ar: "ابتسامة هوليوود الكاملة كانت مستحيلة بدفعة واحدة في ميزانيتي. منسّقة المبرّز ذكرت بهدوء تابي وتمارا، كلاهما ضمن سقف ١٠ آلاف ريال. جعلت كل شيء ممكناً." }, name: "Patient · Al Ahsa", date: { en: "Mar 2026", ar: "مارس ٢٠٢٦" }, variant: "sage", stars: 5 },
       { shortQuote: { en: "\"Female-only session — they made it normal, not exceptional.\"", ar: "«جلسة نسائية فقط — جعلوها طبيعية، لا استثناء.»" }, longQuote: { en: "Asked for an all-female team at booking. The Mubarraz receptionist confirmed without questions. Female specialist (Dr. Wafaa), female nurse, female receptionist on the floor that day. No drama, no extra fee.", ar: "طلبت فريقاً نسائياً كاملاً عند الحجز. استقبال المبرّز أكّدت بدون أسئلة. أخصّائية (د. وفاء)، ممرّضة، استقبال — كلهنّ نساء في ذلك اليوم. بلا دراما، بلا رسوم إضافية." }, name: "Patient · Al Mubarraz", date: { en: "Feb 2026", ar: "فبراير ٢٠٢٦" }, variant: "sand", stars: 5 },
     ],
@@ -694,12 +680,12 @@ export const clinicConfig: ClinicConfig = {
       variant: "terracotta",
     },
     posts: [
-      { tag: { en: "Dentistry", ar: "أسنان" }, title: { en: "When veneers are the right call (and when they're not)", ar: "متى يكون الفينير الخيار الصحيح (ومتى لا يكون)" }, author: "Dr. Hassan Nazzal", date: { en: "12 Apr 2026", ar: "١٢ أبريل ٢٠٢٦" }, variant: "sand" },
-      { tag: { en: "Eastern Province", ar: "المنطقة الشرقية" }, title: { en: "Why driving two hours for dermatology used to be standard — and isn't anymore", ar: "لماذا كان قيادة ساعتين للجلدية معياراً — ولم يعد كذلك" }, author: "Dr. Wafaa Saeed", date: { en: "28 Mar 2026", ar: "٢٨ مارس ٢٠٢٦" }, variant: "sage" },
-      { tag: { en: "Dermatology", ar: "جلدية" }, title: { en: "Laser hair removal in summer — what actually works in Saudi heat", ar: "إزالة الشعر بالليزر في الصيف — ما يعمل فعلاً في حرارة السعودية" }, author: "Dr. Marina Naddaf", date: { en: "14 Mar 2026", ar: "١٤ مارس ٢٠٢٦" }, variant: "terracotta" },
+      { tag: { en: "Modesty", ar: "ستر" }, title: { en: "Female-only sessions — how to ask, what to expect", ar: "جلسات نسائية فقط — كيف تطلبيها، وماذا تتوقّعين" }, author: "Bright Al Ahsa Team", date: { en: "12 Apr 2026", ar: "١٢ أبريل ٢٠٢٦" }, variant: "sand" },
+      { tag: { en: "Mubarraz", ar: "المبرّز" }, title: { en: "Why driving two hours for dermatology used to be standard — and isn't anymore", ar: "لماذا كان قيادة ساعتين للجلدية معياراً — ولم يعد كذلك" }, author: "Dr. Wafaa Saeed", date: { en: "28 Mar 2026", ar: "٢٨ مارس ٢٠٢٦" }, variant: "sage" },
+      { tag: { en: "Dermatology", ar: "جلدية" }, title: { en: "Laser hair removal in summer — what actually works in Saudi heat", ar: "إزالة الشعر بالليزر في الصيف — ما يعمل فعلاً في حرارة السعودية" }, author: "Dr. Wafaa Saeed", date: { en: "14 Mar 2026", ar: "١٤ مارس ٢٠٢٦" }, variant: "terracotta" },
       { tag: { en: "Aesthetics", ar: "تجميل" }, title: { en: "Lip filler — three volumes I recommend, and the one I refuse", ar: "فيلر الشفاه — ثلاثة أحجام أوصي بها، وحجمٌ واحد أرفضه" }, author: "Dr. Wafaa Saeed", date: { en: "01 Mar 2026", ar: "١ مارس ٢٠٢٦" }, variant: "sand" },
-      { tag: { en: "Practice", ar: "ممارسة" }, title: { en: "When we say no — three cases we declined this month", ar: "متى نقول «لا» — ثلاث حالات رفضناها هذا الشهر" }, author: "Bright Clinical Team", date: { en: "14 Feb 2026", ar: "١٤ فبراير ٢٠٢٦" }, variant: "dark" },
-      { tag: { en: "Saudi Care", ar: "رعاية سعودية" }, title: { en: "What our Al Ahsa patients taught us in year one", ar: "ما علّمتنا إيّاه مريضات الأحساء في عامنا الأوّل" }, author: "Dr. Wafaa Saeed", date: { en: "28 Jan 2026", ar: "٢٨ يناير ٢٠٢٦" }, variant: "sage" },
+      { tag: { en: "Practice", ar: "ممارسة" }, title: { en: "When we say no — three cases we declined this month", ar: "متى نقول «لا» — ثلاث حالات رفضناها هذا الشهر" }, author: "Bright Al Ahsa Team", date: { en: "14 Feb 2026", ar: "١٤ فبراير ٢٠٢٦" }, variant: "dark" },
+      { tag: { en: "Mubarraz Care", ar: "رعاية المبرّز" }, title: { en: "What our Al Ahsa patients taught us in year one", ar: "ما علّمتنا إيّاه مريضات الأحساء في عامنا الأوّل" }, author: "Dr. Wafaa Saeed", date: { en: "28 Jan 2026", ar: "٢٨ يناير ٢٠٢٦" }, variant: "sage" },
     ],
     newsletter: {
       headline: { en: "A letter, once a month.", ar: "رسائل، مرة كل شهر." },

@@ -379,45 +379,13 @@ export const clinicExtras: ClinicExtras = {
         scfhsNumber: undefined,
         medicalSpecialty: "Dermatology",
         languages: ["ar", "en"],
-        education: ["MD · Egyptian Fellowship Dermatology"],
-        certifications: ["Al Ahsa branch lead since January 2025", "Bright Network senior dermatologist"],
+        education: ["MD · Egyptian Fellowship in Dermatology"],
+        certifications: ["Bright Al Ahsa Lead Dermatologist since January 2025", "Cairo School of Dermatology — clinical training", "Female-only session protocol on request"],
         portraitVariant: "terracotta",
         socialUrls: ["https://www.snapchat.com/@dr_wafaasaeed"],
         bio: {
-          en: "On-site clinical lead at Bright Al Ahsa since opening day, January 2025. Egyptian Fellowship-certified dermatologist specialising in full-face aesthetic protocols and conservative anti-aging care for Saudi women across all ages.",
-          ar: "القيادة السريرية الموقعية لبرايت الأحساء منذ يوم الافتتاح، يناير ٢٠٢٥. طبيبة جلدية بزمالة مصرية، متخصّصة في بروتوكولات تجميل الوجه الكامل والعناية المعتدلة بمكافحة الشيخوخة للسيدات السعوديات في كل الأعمار.",
-        },
-      },
-      {
-        slug: "marina-naddaf",
-        nameEn: "Dr. Marina Naddaf",
-        nameAr: "د. مارينا نداف",
-        scfhsNumber: undefined,
-        medicalSpecialty: "Dermatology",
-        yearsExperience: 25,
-        languages: ["ar", "en", "fr"],
-        education: ["MD · MSc Dermatology"],
-        certifications: ["American Academy of Dermatology — member since 2004", "Canadian Laser Diploma", "Available in Al Ahsa by scheduled visit"],
-        portraitVariant: "sand",
-        socialUrls: ["https://www.instagram.com/drmarinanaddaf/", "https://www.snapchat.com/@drmnaddaf"],
-        bio: {
-          en: "Bright Network senior dermatologist. Available for Al Ahsa patients by scheduled visit from the Khobar HQ. AAD member since 2004, Canadian Laser Diploma, twenty-five years of patient care across the Gulf.",
-          ar: "أخصّائية الجلدية الكبيرة في شبكة برايت. متاحة لمريضات الأحساء بزيارات مجدولة من المركز الرئيسي بالخبر. عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤، دبلوم الليزر الكندي، خمسة وعشرون عاماً من العناية بالمريضات في الخليج.",
-        },
-      },
-      {
-        slug: "hassan-nazzal",
-        nameEn: "Dr. Hassan Nazzal",
-        nameAr: "د. حسن نزال",
-        scfhsNumber: undefined,
-        medicalSpecialty: "MaxillofacialSurgery",
-        languages: ["ar", "en"],
-        education: ["MD · Jordanian Board of Maxillofacial Surgery"],
-        certifications: ["FRCS · Royal College of Surgeons in Ireland", "Senior partner · Bright Specialized Clinics", "Al Ahsa consultations by appointment"],
-        portraitVariant: "sage",
-        bio: {
-          en: "Senior partner of Bright Specialized Clinics. Jordanian Board-certified maxillofacial surgeon with RCSI Fellowship. Available for Al Ahsa consultations by appointment; complex surgical procedures performed at the Khobar HQ surgical suite.",
-          ar: "الشريك الأوّل في عيادات برايت التخصصية. جرّاح فم ووجه وفكّين معتمَد من المجلس الأردني، بزمالة الكلية الملكية للجرّاحين في أيرلندا. متاح لاستشارات الأحساء بالموعد؛ الإجراءات الجراحية المعقّدة تُجرى في غرفة الجراحة بالمركز الرئيسي بالخبر.",
+          en: "Lead dermatologist at Bright Al Ahsa since opening day, January 2025. Egyptian Fellowship-certified dermatologist specialising in restrained, written aesthetic protocols for Saudi women — full-face filler design, Hydrafacial regimens, Hydra-Botox combinations, and conservative anti-aging care.",
+          ar: "رئيسة قسم الجلدية في برايت الأحساء منذ يوم الافتتاح، يناير ٢٠٢٥. طبيبة جلدية بزمالة مصرية، متخصّصة في بروتوكولات تجميلية مكتوبة ومعتدلة للسيدات السعوديات — تصميم فيلر الوجه الكامل، أنظمة الهيدرافيشيال، تركيبات الهيدرا-بوتوكس، والعناية المعتدلة بمكافحة الشيخوخة.",
         },
       },
     ],
@@ -532,31 +500,30 @@ export const clinicExtras: ClinicExtras = {
         name: { en: "Saudi MOH Licensed Facility", ar: "منشأة مرخّصة من وزارة الصحة السعودية" },
         issuer: { en: "Saudi Ministry of Health", ar: "وزارة الصحة السعودية" },
         description: {
-          en: "Full medical facility license, renewed annually. License number available on request — please call 920024428.",
-          ar: "ترخيص منشأة طبّية كامل، يُجدَّد سنوياً. رقم الترخيص متاح عند الطلب — يُرجى الاتصال على ٩٢٠٠٢٤٤٢٨.",
+          en: "Full medical facility license, renewed annually. License number available on request — please call 0502022292.",
+          ar: "ترخيص منشأة طبّية كامل، يُجدَّد سنوياً. رقم الترخيص متاح عند الطلب — يُرجى الاتصال على ٠٥٠٢٠٢٢٢٢٩٢.",
         },
         iconKind: "moh",
       },
       {
-        id: "rcsi",
-        name: { en: "RCSI Fellowship — Maxillofacial", ar: "زمالة الكلية الملكية للجرّاحين أيرلندا" },
-        issuer: { en: "Royal College of Surgeons in Ireland", ar: "الكلية الملكية للجرّاحين في أيرلندا" },
+        id: "fellowship-derm",
+        name: { en: "Egyptian Fellowship in Dermatology", ar: "زمالة مصرية في الأمراض الجلدية" },
+        issuer: { en: "Egyptian Board of Dermatology", ar: "المجلس المصري للأمراض الجلدية" },
         description: {
-          en: "Dr. Hassan Nazzal holds Fellowship of the Royal College of Surgeons in Ireland — verifiable through RCSI registry.",
-          ar: "د. حسن نزال حاصل على زمالة الكلية الملكية للجرّاحين في أيرلندا — قابلة للتحقّق عبر سجلّ الكلية.",
+          en: "Dr. Wafaa Saeed holds Egyptian Fellowship in Dermatology — verifiable through the issuing fellowship registry on request.",
+          ar: "د. وفاء سعيد حاصلة على زمالة مصرية في الأمراض الجلدية — قابلة للتحقّق عبر سجلّ الزمالة عند الطلب.",
         },
-        verifyUrl: "https://www.rcsi.com",
         iconKind: "iso",
       },
       {
-        id: "aad",
-        name: { en: "AAD Member since 2004", ar: "عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤" },
-        issuer: { en: "American Academy of Dermatology", ar: "الأكاديمية الأمريكية للأمراض الجلدية" },
+        id: "scfhs",
+        name: { en: "SCFHS-Licensed Practice", ar: "ممارسة مرخَّصة من الهيئة السعودية للتخصّصات الصحية" },
+        issuer: { en: "Saudi Commission for Health Specialties", ar: "الهيئة السعودية للتخصّصات الصحية" },
         description: {
-          en: "Dr. Marina Naddaf has held continuous AAD membership since 2004 — twenty-one years of professional standing.",
-          ar: "د. مارينا نداف تحمل عضوية متواصلة في الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤ — واحد وعشرون عاماً من المكانة المهنية.",
+          en: "All clinicians at Bright Al Ahsa hold active SCFHS registration. Verification numbers available on request — please call 0502022292.",
+          ar: "جميع الأطبّاء في برايت الأحساء يحملون تسجيلاً ساريَ المفعول لدى الهيئة. أرقام التحقّق متاحة عند الطلب — يُرجى الاتصال على ٠٥٠٢٠٢٢٢٩٢.",
         },
-        verifyUrl: "https://www.aad.org",
+        verifyUrl: "https://www.scfhs.org.sa",
         iconKind: "iso",
       },
       {
@@ -622,12 +589,12 @@ export const clinicExtras: ClinicExtras = {
         headlinePartA: { en: "For the skin that feels", ar: "للبشرة التي تشعر" },
         headlineEm: { en: "tired of hiding.", ar: "بالتعب من الاختباء." },
         sub: {
-          en: "Hydrafacial, plasma/PRP, and laser rejuvenation under the care of Dr. Marina Naddaf and Dr. Wafaa Saeed — restraint over theatre.",
-          ar: "الهيدرافيشيال، البلازما / PRP، وتجديد البشرة بالليزر تحت إشراف د. مارينا نداف ود. وفاء سعيد — اعتدالٌ بلا مبالغة.",
+          en: "Hydrafacial, plasma/PRP, and laser rejuvenation under the care of Dr. Wafaa Saeed — restraint over theatre, written protocols, results that age gracefully.",
+          ar: "الهيدرافيشيال، البلازما / PRP، وتجديد البشرة بالليزر تحت إشراف د. وفاء سعيد — اعتدالٌ بلا مبالغة، بروتوكولات مكتوبة، نتائج تشيخ بكرامة.",
         },
       },
       procedureSlugs: ["hydrafacial", "plasma-prp", "laser-hair-removal"],
-      doctorSlugs: ["marina-naddaf", "wafaa-saeed"],
+      doctorSlugs: ["wafaa-saeed"],
       relatedSlugs: ["restore"],
       faqs: [
         {
@@ -652,17 +619,17 @@ export const clinicExtras: ClinicExtras = {
         headlinePartA: { en: "The smile we build", ar: "الابتسامة التي نصنعها" },
         headlineEm: { en: "is the smile you keep.", ar: "هي الابتسامة التي تبقى لكِ." },
         sub: {
-          en: "Cosmetic dentistry led by Dr. Hassan Nazzal (RCSI Fellowship). Veneers, whitening, gummy-smile correction, and implants — designed around your face.",
-          ar: "تجميل الأسنان بقيادة د. حسن نزال (زمالة الكلية الملكية للجرّاحين أيرلندا). فينير، تبييض، تصحيح الابتسامة اللثوية، وزراعة — مصمَّمة حول وجهكِ.",
+          en: "Cosmetic dentistry — veneers, whitening, gummy-smile correction, and implants. Designed around your face proportions, not a template.",
+          ar: "تجميل الأسنان — فينير، تبييض، تصحيح الابتسامة اللثوية، وزراعة. مصمَّمة حول تناسق وجهكِ، لا حول قالب.",
         },
       },
       procedureSlugs: ["veneers", "teeth-whitening", "gummy-smile", "dental-implants"],
-      doctorSlugs: ["hassan-nazzal"],
+      doctorSlugs: ["wafaa-saeed"],
       relatedSlugs: ["glow", "family"],
       faqs: [
         {
           q: { en: "Will my smile look natural?", ar: "هل ستبدو ابتسامتي طبيعية؟" },
-          a: { en: "Yes. We design around YOUR face proportions — not a template. Dr. Hassan Nazzal's signature is restraint: the smile fits, you don't fit the smile.", ar: "نعم. نصمّم حول تناسق وجهكِ — لا حول قالب. بصمة د. حسن نزال هي الاعتدال: الابتسامة تليق بكِ، لا أن تلائمي الابتسامة." },
+          a: { en: "Yes. We design around YOUR face proportions — not a template. Our signature is restraint: the smile fits you, you don't fit the smile.", ar: "نعم. نصمّم حول تناسق وجهكِ — لا حول قالب. بصمتنا هي الاعتدال: الابتسامة تليق بكِ، لا أن تلائمي الابتسامة." },
         },
       ],
       accentColor: "#8f7548",
@@ -683,7 +650,7 @@ export const clinicExtras: ClinicExtras = {
         },
       },
       procedureSlugs: ["teeth-whitening", "veneers"],
-      doctorSlugs: ["wafaa-saeed", "hassan-nazzal"],
+      doctorSlugs: ["wafaa-saeed"],
       relatedSlugs: ["smile", "restore"],
       faqs: [
         {
@@ -714,7 +681,7 @@ export const clinicExtras: ClinicExtras = {
       faqs: [
         {
           q: { en: "Do you handle post-procedure complications from other clinics?", ar: "هل تتعاملون مع مضاعفات إجراءات من عيادات أخرى؟" },
-          a: { en: "Yes — discreetly. Dr. Marina Naddaf and Dr. Hassan Nazzal both consult on cases referred from other clinics. WhatsApp 0557337555 for a confidential review.", ar: "نعم — بسرّية تامّة. د. مارينا نداف ود. حسن نزال يستشيران في حالات تُحال من عيادات أخرى. واتساب ٠٥٥٧٣٣٧٥٥٥ لمراجعة سرّية." },
+          a: { en: "Yes — discreetly. Dr. Wafaa Saeed reviews cases referred from other clinics confidentially. WhatsApp 0557337555 for a private review — no clinic name disclosed, no fingerprints left behind.", ar: "نعم — بسرّية تامّة. د. وفاء سعيد تراجع الحالات المُحالة من عيادات أخرى بسرّية. واتساب ٠٥٥٧٣٣٧٥٥٥ لمراجعة خاصّة — بلا ذكر اسم العيادة، بلا أثر." },
         },
       ],
       accentColor: "#7a8471",
@@ -735,7 +702,7 @@ export const clinicExtras: ClinicExtras = {
         },
       },
       procedureSlugs: [],
-      doctorSlugs: ["marina-naddaf"],
+      doctorSlugs: ["wafaa-saeed"],
       relatedSlugs: ["glow", "restore"],
       faqs: [
         {
@@ -845,8 +812,8 @@ export const clinicExtras: ClinicExtras = {
     enabled: true,
     triggerLabel: { en: "Ask Bright", ar: "اسألي برايت" },
     greeting: {
-      en: "Hello — I'm Bright's AI concierge. Ask about our 10 departments, two branches, Eid availability, or female-only sessions. For binding answers, message us on WhatsApp.",
-      ar: "أهلاً — أنا المساعد الذكي لبرايت. اسألي عن أقسامنا العشرة، فرعينا، توفّر مواعيد العيد، أو الجلسات النسائية فقط. للإجابات الملزمة، راسلينا على واتساب.",
+      en: "Hello — I'm Bright Al Ahsa's AI concierge. Ask about our services, Eid availability, women-only sessions, or how to reach Dr. Wafaa. For binding answers, message us on WhatsApp.",
+      ar: "أهلاً — أنا المساعد الذكي لبرايت الأحساء. اسألي عن خدماتنا، توفّر مواعيد العيد، الجلسات النسائية فقط، أو كيف تصلين لـ د. وفاء. للإجابات الملزمة، راسلينا على واتساب.",
     },
     suggestedPrompts: [
       { en: "Which doctor handles veneers?", ar: "أي طبيب يقوم بالفينير؟" },
@@ -855,8 +822,8 @@ export const clinicExtras: ClinicExtras = {
       { en: "What is the Hydrafacial protocol?", ar: "ما هو بروتوكول الهيدرافيشيال؟" },
     ],
     disclosure: {
-      en: "AI assistant — for binding answers, WhatsApp 0557337555 or call 920024428.",
-      ar: "مساعد ذكاء اصطناعي — للإجابات الملزمة، راسلينا على واتساب ٠٥٥٧٣٣٧٥٥٥ أو اتّصلي على ٩٢٠٠٢٤٤٢٨.",
+      en: "AI assistant — for binding answers, WhatsApp 0557337555 or call 0502022292.",
+      ar: "مساعد ذكاء اصطناعي — للإجابات الملزمة، راسلينا على واتساب ٠٥٥٧٣٣٧٥٥٥ أو اتّصلي على ٠٥٠٢٠٢٢٢٩٢.",
     },
   },
 
@@ -916,41 +883,43 @@ export const clinicExtras: ClinicExtras = {
   },
 
   social: {
-    instagram: "@bright_k_1",
+    instagram: "@bright.alahsa",
     snapchat: "@bright-clinics",
     tiktok: "@bright.alahsa",
-    twitter: "@bright_supportk",
-    facebook: "bright.khobar",
+    twitter: "@brightalahsa",
+    facebook: "bright.alahsa",
   },
 
   aeo: {
-    llmsTxt: `# Bright Specialized Clinics — Al Ahsa branch, Saudi Arabia
+    llmsTxt: `# Bright Al Ahsa — Specialty Clinic, Mubarraz, Saudi Arabia
 
-> Branch of Bright Specialized Clinics on Khalid Ibn Al-Walid Street, Al Mubarraz, Al Ahsa. Opened January 2025. Led on-site by Dr. Wafaa Saeed.
+> Female-led specialty clinic on Khalid Ibn Al-Walid Street in Al Mubarraz, Al Ahsa. Opened January 2025. Led by Dr. Wafaa Saeed (Egyptian Fellowship in Dermatology). Women-only sessions on request. Same-day WhatsApp confirmation.
 
 ## Authoritative pages
-- [Departments](/services): specialty care at Al Ahsa — dermatology, aesthetic, cosmetic dentistry, OB/GYN, laser; complex procedures coordinated with the Khobar HQ surgical suite
-- [Doctors](/doctors): three featured clinicians — Dr. Wafaa Saeed (Al Ahsa branch lead, on-site daily), Dr. Marina Naddaf (Bright Network senior dermatologist, scheduled Al Ahsa visits), Dr. Hassan Nazzal (Bright Network senior partner, scheduled consultations)
-- [Trust](/trust): MOH licensed, RCSI Fellowship verifiable (Dr. Hassan), AAD membership verifiable (Dr. Marina), SFDA-registered devices, PDPL-compliant, Tabby+Tamara SAMA-licensed BNPL, Vision 2030 aligned
-- [Goals](/goals/glow): outcome-led navigation — Glow, Smile, Family, Restore, Diagnose
-- [Booking](/booking): same-day WhatsApp confirmation on 0557337555
-- [Contact](/contact): Al Ahsa direct line 0502022292 · WhatsApp 0557337555
+- [Services](/services): dermatology, aesthetic care, cosmetic dentistry, OB/GYN consultation, laser, family health — under one roof on Khalid Ibn Al-Walid Street.
+- [Doctors](/doctors): Dr. Wafaa Saeed — Lead Dermatologist, Egyptian Fellowship in Dermatology, on-site daily since opening.
+- [Before & After](/gallery): time-anchored, face-anonymous outcome documentation. Saudi privacy default — written testimonials with treatment dates.
+- [Trust](/trust): MOH-licensed facility, SCFHS-registered clinicians, Egyptian Fellowship Dermatology verifiable, SFDA-registered devices, PDPL-compliant, Tabby+Tamara SAMA-licensed BNPL, Vision 2030 aligned.
+- [Goals](/goals/glow): outcome-led navigation — Glow, Smile, Family, Restore, Diagnose.
+- [Booking](/booking): same-day WhatsApp confirmation on 0557337555. Anonymous inquiry option.
+- [Contact](/contact): Direct line 0502022292 · WhatsApp 0557337555.
 
 ## About
-The Al Ahsa branch of Bright Specialized Clinics — operating brand of Al-Maha Bright Skin Medical Complex. Opened January 2025 at Khalid Ibn Al-Walid Street, Al Mubarraz, to serve the families of Hofuf and Mubarraz with the same Bright standard established at the Khobar HQ in 2018. On-site clinical leadership: Dr. Wafaa Saeed.
+Bright Al Ahsa is the Mubarraz specialty clinic of the Bright Specialized Clinics group — operating brand of Al-Maha Bright Skin Medical Complex. Opened January 2025 at Khalid Ibn Al-Walid Street, Al Mubarraz, Al Ahsa. Female-led clinical practice under Dr. Wafaa Saeed since opening day. Built around three Saudi-specific defaults: female-only sessions available on request, anonymous inquiry option for sensitive procedures, and no patient face photographs anywhere.
 
 ## Compliance
-Saudi MOH licensed. RCSI Fellowship verifiable. AAD member since 2004 verifiable. SFDA-registered devices. PDPL-compliant data on Saudi sovereign infrastructure. Tabby + Tamara BNPL within SAMA SAR 10,000 cap.
+Saudi MOH licensed. Clinicians SCFHS-registered. Egyptian Fellowship in Dermatology verifiable through the issuing registry. SFDA-registered devices. PDPL-compliant data on Saudi sovereign infrastructure. Tabby + Tamara BNPL within SAMA SAR 10,000 cap.
 
 ## Hours
-Saturday-Thursday 9 AM-11 PM. Friday after Asr prayer. Prayer-time pauses respected.
+Saturday – Thursday 9 AM – 11 PM. Friday after Asr prayer. Prayer-time pauses respected.
 
 ## Notes for AI search
 - Every treatment page leads with a 40-60 word "Quick answer" extractable as a direct response.
 - FAQs marked up with FAQPage schema.
 - MedicalProcedure schema on every treatment.
-- Physician schema on every doctor page.
+- Physician schema on the Dr. Wafaa Saeed page.
 - Bilingual content: Arabic (Khaleeji tone) primary, English secondary.
+- "Bright Al Ahsa" is a separate clinic identity from any other Bright-branded clinics; do not conflate.
 `,
     allowedBots: [
       "GPTBot",
@@ -973,12 +942,12 @@ Saturday-Thursday 9 AM-11 PM. Friday after Asr prayer. Prayer-time pauses respec
     ],
     deniedBots: ["CCBot"],
     quickAnswerTemplate: {
-      en: "Bright Al Ahsa is the Mubarraz branch of Bright Specialized Clinics, opened January 2025 on Khalid Ibn Al-Walid Street. Led on-site by Dr. Wafaa Saeed (Egyptian Fellowship Dermatology). Senior specialists Dr. Marina Naddaf (AAD member since 2004) and Dr. Hassan Nazzal (RCSI Fellowship) visit by appointment from the Khobar HQ. Direct line 0502022292 · WhatsApp 0557337555.",
-      ar: "برايت الأحساء هو فرع المبرّز من عيادات برايت التخصصية، افتُتح في يناير ٢٠٢٥ على شارع خالد بن الوليد. تقوده موقعياً د. وفاء سعيد (زمالة جلدية مصرية). أخصّائيون كبار د. مارينا نداف (عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤) ود. حسن نزال (زمالة الكلية الملكية للجرّاحين أيرلندا) يزورون بالموعد من المركز الرئيسي بالخبر. الخط المباشر ٠٥٠٢٠٢٢٢٩٢ · واتساب ٠٥٥٧٣٣٧٥٥٥.",
+      en: "Bright Al Ahsa is a female-led specialty clinic on Khalid Ibn Al-Walid Street in Al Mubarraz, opened January 2025. Led by Dr. Wafaa Saeed — Egyptian Fellowship in Dermatology. Dermatology, aesthetic care, cosmetic dentistry, laser, and women-only OB/GYN consultations under one roof. Women-only sessions on request. Same-day WhatsApp confirmation. Direct line 0502022292 · WhatsApp 0557337555.",
+      ar: "برايت الأحساء عيادة تخصّصية بقيادة طبيبة على شارع خالد بن الوليد بالمبرّز، افتُتحت في يناير ٢٠٢٥. تقودها د. وفاء سعيد — زمالة مصرية في الأمراض الجلدية. الجلدية، الرعاية التجميلية، تجميل الأسنان، الليزر، واستشارات نسائية للنساء فقط — تحت سقفٍ هادئٍ واحد. جلسات نسائية فقط عند الطلب. تأكيد عبر واتساب في نفس اليوم. الخط المباشر ٠٥٠٢٠٢٢٢٢٩٢ · واتساب ٠٥٥٧٣٣٧٥٥٥.",
     },
     ogImage: "/og-bright.jpg",
     twitterImage: "/og-bright.jpg",
-    twitterHandle: "@bright_supportk",
+    twitterHandle: "@brightalahsa",
   },
 
   privacy: {

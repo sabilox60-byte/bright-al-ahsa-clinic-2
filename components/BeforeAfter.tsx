@@ -23,7 +23,7 @@ const testimonials = [
   {
     patientNumber: "№ 247",
     quote:
-      "I waited three months before booking. I waited 24 hours after the first session to call my sister — Mubarraz finally has the standard we used to drive to Khobar for.",
+      "I waited three months before booking. I waited 24 hours after the first session to call my sister — and told her this is the dermatology Mubarraz finally deserves.",
     initials: "A.M.",
     location: "Al Mubarraz",
     treatment: "Three Hydrafacial sessions · Dr. Wafaa Saeed",
