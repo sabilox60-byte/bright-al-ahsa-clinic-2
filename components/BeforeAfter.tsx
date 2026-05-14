@@ -1,44 +1,125 @@
-import Portrait from "./Portrait";
+import Image from "next/image";
 import ChapterMark from "./ChapterMark";
 import ScrollReveal from "./ScrollReveal";
 import { clinicConfig } from "@/lib/clinic-config";
 
 /**
- * Bright Before/After — COMPLIANT visual contrast.
+ * Bright Before/After — single real-case storytelling.
  *
- * Constraint: NO patient face photos (PDPL + SFDA hard line).
- * Solution: Two-state visual contrast using ambient mood plates +
- * inline patient testimonials with time anchors.
+ * Pattern: photo + day-label chip + caption card directly below each photo.
+ * No duplicated testimonial section. Arabic Khaleeji review on each card.
+ * The full gallery (other cases) is one tap away via the CTA button below.
  *
- *  Left mood plate (Before, sand variant)  →  Right mood plate (After, terracotta)
- *  Each plate carries: chip label, time marker, treatment caption.
- *  Below: 2 anonymous testimonials in letterpress format.
- *  Below that: explicit disclaimer (privacy by default).
- *
- * This restores the visual two-state psychology premium clinics rely on,
- * without ever showing a patient face.
+ * Saudi privacy: faces shown only when patient has signed written consent —
+ * acknowledged in the footer disclaimer.
  */
 
-const testimonials = [
-  {
-    patientNumber: "№ 247",
-    quote:
-      "I waited three months before booking. I waited 24 hours after the first session to call my sister — and told her this is the dermatology Mubarraz finally deserves.",
-    initials: "A.M.",
-    location: "Al Mubarraz",
-    treatment: "Three Hydrafacial sessions · Dr. Wafaa Saeed",
-    days: "Day 1 · Day 28 · Day 90",
-  },
-  {
-    patientNumber: "№ 392",
-    quote:
-      "My mother came with me to the first visit. By the third, she had booked her own.",
-    initials: "R.K.",
-    location: "Hofuf",
-    treatment: "Filler · Dr. Wafaa Saeed",
-    days: "Day 1 · Day 14",
-  },
-];
+const beforeCard = {
+  chipLabel: "قبل",
+  dayLabel: "اليوم الأول · الاستشارة",
+  quote:
+    "كنت أشوف بشرتي باهتة ومتعبة، بس ما كنت متوقّعة إنّ الفرق بيكون واضح لهالدرجة لما أشوف الصور.",
+};
+
+const afterCard = {
+  chipLabel: "بعد · ١٠ أيام",
+  dayLabel: "اليوم العاشر · النتيجة",
+  quote:
+    "بصراحة النتيجة صدمتني بطريقة حلوة. بشرتي صارت أصفى، أنعم، وفيها نضارة طبيعية بدون أي مبالغة. أكثر شي عجبني إنّ شكلي ظلّ أنا، بس بنسخة أرتب وأنضر. شكراً د. Marina Naddaf.",
+};
+
+function CaseCard({
+  src,
+  alt,
+  chipLabel,
+  chipDark,
+  dayLabel,
+  quote,
+}: {
+  src: string;
+  alt: string;
+  chipLabel: string;
+  chipDark?: boolean;
+  dayLabel: string;
+  quote: string;
+}) {
+  return (
+    <div
+      style={{
+        background: "#ffffff",
+        borderRadius: 16,
+        overflow: "hidden",
+        boxShadow:
+          "0 0 0 1px rgba(178,147,98,0.18), 0 18px 56px rgba(10,31,46,0.06)",
+      }}
+    >
+      <div className="relative">
+        <Image
+          src={src}
+          alt={alt}
+          width={1400}
+          height={1045}
+          priority
+          style={{ width: "100%", height: 420, objectFit: "cover", display: "block" }}
+        />
+        <span
+          className={chipDark ? "chip chip-dark" : "chip"}
+          style={{ position: "absolute", top: 16, left: 16 }}
+        >
+          {chipLabel}
+        </span>
+      </div>
+      <div
+        dir="rtl"
+        style={{
+          padding: "22px 26px 26px",
+          textAlign: "right",
+        }}
+      >
+        <div
+          className="font-mono"
+          style={{
+            fontSize: 11,
+            color: "#8f7548",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            marginBottom: 12,
+          }}
+        >
+          {dayLabel}
+        </div>
+        <p
+          className="font-prose"
+          style={{
+            fontFamily: "var(--font-amiri), serif",
+            fontSize: 17,
+            lineHeight: 1.85,
+            color: "#0a1f2e",
+            margin: 0,
+            position: "relative",
+            paddingTop: 4,
+          }}
+        >
+          <span
+            aria-hidden
+            style={{
+              position: "absolute",
+              top: -22,
+              right: -6,
+              fontSize: 56,
+              color: "rgba(178,147,98,0.3)",
+              fontFamily: "var(--font-source-serif), serif",
+              lineHeight: 1,
+            }}
+          >
+            &ldquo;
+          </span>
+          {quote}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function BeforeAfter() {
   const b = clinicConfig.beforeAfter;
@@ -86,209 +167,40 @@ export default function BeforeAfter() {
                 maxWidth: 380,
               }}
             >
-              We show the journey, not the face. Compliant with Saudi PDPL and
-              SFDA — every visual here is symbolic, every word is a real patient.
+              Real patient photos, shared with written consent. Saudi privacy
+              respected — every visible patient signed a release. Names withheld
+              by request.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Visual two-state contrast — ambient mood plates */}
+        {/* Two-state case storytelling — photo + caption card per side */}
         <ScrollReveal variant="fade-up" delay={100}>
           <div
             className="grid gap-6 mobile-stack"
             style={{
               gridTemplateColumns: "1fr 1fr",
               marginTop: 56,
-              alignItems: "center",
+              alignItems: "start",
             }}
           >
-            {/* BEFORE */}
-            <div className="relative">
-              <Portrait
-                variant="sand"
-                style={{ width: "100%", height: 380 }}
-                rounded={16}
-              />
-              <span
-                className="chip"
-                style={{ position: "absolute", top: 16, left: 16 }}
-              >
-                {b.beforeLabel.en}
-              </span>
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: 16,
-                  left: 16,
-                  right: 16,
-                  background: "rgba(253, 251, 246, 0.94)",
-                  backdropFilter: "blur(4px)",
-                  padding: "12px 16px",
-                  borderRadius: 8,
-                  fontSize: 13,
-                  color: "#0a1f2e",
-                }}
-              >
-                <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: 10, color: "#8f7548", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-                  Day 1 · Consultation
-                </span>
-                <div style={{ marginTop: 4, fontFamily: "var(--font-source-serif), serif", fontSize: 15, fontStyle: "italic" }}>
-                  &ldquo;I wanted something that doesn&rsquo;t shout.&rdquo;
-                </div>
-              </div>
-            </div>
-
-            {/* AFTER */}
-            <div
-              className="relative"
-              style={{ marginTop: 40 }}
-            >
-              <Portrait
-                variant="terracotta"
-                style={{ width: "100%", height: 380 }}
-                rounded={16}
-              />
-              <span
-                className="chip chip-dark"
-                style={{ position: "absolute", top: 16, left: 16 }}
-              >
-                {b.afterLabel.en}
-              </span>
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: 16,
-                  left: 16,
-                  right: 16,
-                  background: "rgba(253, 251, 246, 0.94)",
-                  backdropFilter: "blur(4px)",
-                  padding: "12px 16px",
-                  borderRadius: 8,
-                  fontSize: 13,
-                  color: "#0a1f2e",
-                }}
-              >
-                <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: 10, color: "#8f7548", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-                  Day 28 · Follow-up
-                </span>
-                <div style={{ marginTop: 4, fontFamily: "var(--font-source-serif), serif", fontSize: 15, fontStyle: "italic" }}>
-                  &ldquo;My sister noticed. Then she booked.&rdquo;
-                </div>
-              </div>
-            </div>
+            <CaseCard
+              src="/media/gallery/skin-rejuvenation-before.webp"
+              alt="Before — initial consultation"
+              chipLabel={beforeCard.chipLabel}
+              dayLabel={beforeCard.dayLabel}
+              quote={beforeCard.quote}
+            />
+            <CaseCard
+              src="/media/gallery/skin-rejuvenation-after.webp"
+              alt="After — 10 days follow-up"
+              chipLabel={afterCard.chipLabel}
+              chipDark
+              dayLabel={afterCard.dayLabel}
+              quote={afterCard.quote}
+            />
           </div>
         </ScrollReveal>
-
-        {/* Letterpress testimonial cards — voice layer */}
-        <div
-          className="grid gap-8 mobile-stack"
-          style={{
-            gridTemplateColumns: "1fr 1fr",
-            marginTop: 56,
-          }}
-        >
-          {testimonials.map((t, i) => (
-            <ScrollReveal key={i} variant="fade-up" delay={i * 100}>
-              <article
-                style={{
-                  background: "#ffffff",
-                  borderRadius: 12,
-                  overflow: "hidden",
-                  boxShadow:
-                    "0 0 0 1px rgba(178,147,98,0.25), 0 18px 56px rgba(10,31,46,0.08)",
-                  padding: 28,
-                }}
-              >
-                <header
-                  style={{
-                    paddingBottom: 14,
-                    borderBottom: "1px dotted rgba(178,147,98,0.4)",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "baseline",
-                    marginBottom: 18,
-                  }}
-                >
-                  <span
-                    className="font-mono"
-                    style={{
-                      fontSize: 11,
-                      color: "#8f7548",
-                      letterSpacing: "0.08em",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    ✦ Patient {t.patientNumber}
-                  </span>
-                  <span
-                    className="font-mono"
-                    style={{
-                      fontSize: 10,
-                      color: "#7f8487",
-                      letterSpacing: "0.06em",
-                    }}
-                  >
-                    {t.days}
-                  </span>
-                </header>
-                <blockquote
-                  className="font-prose italic"
-                  style={{
-                    fontSize: 19,
-                    lineHeight: 1.5,
-                    color: "#0a1f2e",
-                    margin: 0,
-                    position: "relative",
-                  }}
-                >
-                  <span
-                    aria-hidden
-                    style={{
-                      position: "absolute",
-                      top: -16,
-                      left: -8,
-                      fontSize: 48,
-                      color: "rgba(178,147,98,0.35)",
-                      fontFamily: "var(--font-source-serif), serif",
-                      lineHeight: 1,
-                    }}
-                  >
-                    &ldquo;
-                  </span>
-                  <span style={{ position: "relative" }}>{t.quote}</span>
-                </blockquote>
-                <footer
-                  style={{
-                    borderTop: "1px dotted rgba(178,147,98,0.4)",
-                    paddingTop: 14,
-                    marginTop: 18,
-                  }}
-                >
-                  <div
-                    className="font-serif"
-                    style={{
-                      fontSize: 14,
-                      color: "#0a1f2e",
-                      fontWeight: 500,
-                    }}
-                  >
-                    — {t.initials}, {t.location}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: 11,
-                      color: "#7f8487",
-                      marginTop: 4,
-                      letterSpacing: "0.04em",
-                    }}
-                  >
-                    {t.treatment}
-                  </div>
-                </footer>
-              </article>
-            </ScrollReveal>
-          ))}
-        </div>
 
         {/* CTA + disclaimer */}
         <ScrollReveal variant="fade-up" delay={200}>
@@ -314,10 +226,9 @@ export default function BeforeAfter() {
                 margin: 0,
               }}
             >
-              All testimonials shared with written consent. Names withheld at
-              patient request — Saudi privacy by default. Visual plates are
-              symbolic compositions, never patient photographs. Results vary
-              by person, treatment, and follow-through.
+              All photos and testimonials shared with written consent. Results
+              vary by person, treatment plan, and follow-through. Saudi privacy
+              by default — patient names withheld by request.
             </p>
             <a
               href="/gallery"
