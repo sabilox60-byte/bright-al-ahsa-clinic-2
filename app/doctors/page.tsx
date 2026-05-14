@@ -32,11 +32,20 @@ export default function DoctorsPage() {
             className="container-page grid gap-10 mobile-stack"
             style={{ gridTemplateColumns: "repeat(2, 1fr)" }}
           >
-            {dp.items.map((member, i) => (
+            {dp.items.map((member, i) => {
+              const isLonelyLast =
+                i === dp.items.length - 1 && dp.items.length % 2 === 1;
+              return (
               <article
                 key={i}
-                className="card"
-                style={{ padding: 0, overflow: "hidden" }}
+                className="card doctor-card"
+                style={{
+                  padding: 0,
+                  overflow: "hidden",
+                  ...(isLonelyLast
+                    ? { gridColumn: "1 / -1", maxWidth: 720, margin: "0 auto", width: "100%" }
+                    : {}),
+                }}
               >
                 <div
                   className="doctor-card-inner"
@@ -101,7 +110,8 @@ export default function DoctorsPage() {
                   </div>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </section>
 
