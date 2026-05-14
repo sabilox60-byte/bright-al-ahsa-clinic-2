@@ -29,13 +29,13 @@ export default function DoctorsPage() {
 
         <section className="section" style={{ position: "relative", zIndex: 2 }}>
           <div
-            className="container-page doctors-flex"
+            className="container-page doctors-grid"
             style={{
-              display: "flex",
-              flexWrap: "wrap",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(480px, 1fr))",
+              gridAutoRows: "minmax(480px, auto)",
               gap: 40,
-              justifyContent: "center",
-              alignItems: "stretch",
+              justifyItems: "center",
             }}
           >
             {dp.items.map((member, i) => (
@@ -45,9 +45,10 @@ export default function DoctorsPage() {
                 style={{
                   padding: 0,
                   overflow: "hidden",
-                  flex: "1 1 480px",
+                  width: "100%",
                   maxWidth: 560,
-                  minWidth: 320,
+                  minHeight: 480,
+                  height: "100%",
                   display: "flex",
                   flexDirection: "column",
                 }}
