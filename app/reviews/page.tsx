@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import Portrait from "@/components/Portrait";
 import BookCtaDark from "@/components/BookCtaDark";
 import { clinicConfig } from "@/lib/clinic-config";
+import { clinicExtras } from "@/lib/clinic-extras";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 
 export default function ReviewsPage() {
   const { reviewsPage: rp } = clinicConfig;
+  const badges = clinicExtras.trustVault.badges;
 
   return (
     <>
@@ -27,10 +29,47 @@ export default function ReviewsPage() {
           variant="sage"
         />
 
+        {/* Trust badges strip — verifiable credentials moved from /trust */}
+        <section
+          style={{
+            padding: "32px 0",
+            background:
+              "radial-gradient(circle at 50% 0%, rgba(212, 184, 153, 0.45) 0%, transparent 70%), linear-gradient(180deg, #f5efe1 0%, #ece5d4 100%)",
+            borderBottom: "1px solid rgba(143, 117, 72, 0.18)",
+            position: "relative",
+            zIndex: 2,
+          }}
+        >
+          <div className="container-page">
+            <div className="overline" style={{ color: "#8f7548", marginBottom: 16, textAlign: "center" }}>
+              ✦ Verifiable trust
+            </div>
+            <div
+              className="flex items-center justify-center flex-wrap gap-3"
+              style={{ rowGap: 10 }}
+            >
+              {badges.map((badge) => (
+                <span
+                  key={badge.id}
+                  className="chip"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.85)",
+                    fontSize: 11,
+                    padding: "8px 14px",
+                  }}
+                  title={badge.description.en}
+                >
+                  {badge.name.en}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Rating summary */}
         <section
           style={{
-            padding: "40px 0",
+            padding: "40px 0 20px",
             position: "relative",
             zIndex: 2,
           }}
@@ -76,68 +115,163 @@ export default function ReviewsPage() {
           </div>
         </section>
 
-        {/* Reviews grid */}
-        <section className="section" style={{ paddingTop: 0, position: "relative", zIndex: 2 }}>
+        {/* Reviews grid — mixed AR / EN cards */}
+        <section className="section" style={{ paddingTop: 24, position: "relative", zIndex: 2 }}>
           <div
             className="container-page grid gap-6 mobile-stack"
             style={{ gridTemplateColumns: "repeat(3, 1fr)" }}
           >
-            {rp.items.map((r, i) => (
-              <figure
-                key={i}
-                className="card"
-                style={{
-                  margin: 0,
-                  padding: 28,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 16,
-                }}
-              >
-                <div style={{ color: "#b29362", letterSpacing: 2, fontSize: 14 }}>
-                  {"★".repeat(r.stars)}
-                </div>
-                <blockquote
-                  className="font-prose italic"
+            {rp.items.map((r, i) => {
+              const isArabic = r.lang === "ar";
+              const shortQuote = isArabic ? r.shortQuote.ar : r.shortQuote.en;
+              const longQuote = isArabic ? r.longQuote.ar : r.longQuote.en;
+              const dateText = isArabic ? (r.date.ar || r.date.en) : r.date.en;
+              const treatment = r.treatment
+                ? (isArabic ? r.treatment.ar : r.treatment.en)
+                : null;
+
+              return (
+                <figure
+                  key={i}
+                  dir={isArabic ? "rtl" : "ltr"}
+                  className="card"
                   style={{
                     margin: 0,
-                    fontSize: 22,
-                    lineHeight: 1.35,
-                    color: "#0a1f2e",
-                  }}
-                >
-                  {r.shortQuote.en}
-                </blockquote>
-                <p style={{ fontSize: 14, color: "#7f8487", lineHeight: 1.6, margin: 0 }}>
-                  {r.longQuote.en}
-                </p>
-                <figcaption
-                  style={{
+                    padding: 28,
                     display: "flex",
-                    alignItems: "center",
-                    gap: 12,
-                    marginTop: "auto",
-                    paddingTop: 16,
-                    borderTop: "1px dotted #8f7548",
+                    flexDirection: "column",
+                    gap: 16,
+                    textAlign: isArabic ? "right" : "left",
                   }}
                 >
-                  <Portrait
-                    variant={r.variant}
-                    style={{ width: 44, height: 44, borderRadius: 999 }}
-                    rounded={999}
-                  />
-                  <div>
-                    <div style={{ fontSize: 14, fontWeight: 500, color: "#0a1f2e" }}>
-                      {r.name}
-                    </div>
-                    <div style={{ fontSize: 12, color: "#7f8487", marginTop: 2 }}>
-                      {r.date.en}
-                    </div>
+                  <div
+                    style={{
+                      color: "#b29362",
+                      letterSpacing: 2,
+                      fontSize: 14,
+                      textAlign: isArabic ? "right" : "left",
+                    }}
+                  >
+                    {"★".repeat(r.stars)}
                   </div>
-                </figcaption>
-              </figure>
-            ))}
+                  <blockquote
+                    className="font-prose italic"
+                    style={{
+                      margin: 0,
+                      fontSize: isArabic ? 20 : 22,
+                      lineHeight: isArabic ? 1.6 : 1.35,
+                      color: "#0a1f2e",
+                      fontFamily: isArabic
+                        ? "var(--font-amiri), serif"
+                        : undefined,
+                    }}
+                  >
+                    {shortQuote}
+                  </blockquote>
+                  <p
+                    style={{
+                      fontSize: isArabic ? 15 : 14,
+                      color: "#2a3f4f",
+                      lineHeight: isArabic ? 1.85 : 1.6,
+                      margin: 0,
+                      fontFamily: isArabic
+                        ? "var(--font-amiri), serif"
+                        : undefined,
+                    }}
+                  >
+                    {longQuote}
+                  </p>
+                  <figcaption
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 12,
+                      marginTop: "auto",
+                      paddingTop: 16,
+                      borderTop: "1px dotted #8f7548",
+                      flexDirection: isArabic ? "row-reverse" : "row",
+                    }}
+                  >
+                    <Portrait
+                      variant={r.variant}
+                      style={{ width: 44, height: 44, borderRadius: 999 }}
+                      rounded={999}
+                    />
+                    <div style={{ flex: 1 }}>
+                      <div
+                        style={{
+                          fontSize: 14,
+                          fontWeight: 500,
+                          color: "#0a1f2e",
+                          fontFamily: isArabic
+                            ? "var(--font-amiri), serif"
+                            : undefined,
+                        }}
+                      >
+                        {r.name}
+                      </div>
+                      <div
+                        style={{
+                          fontSize: 12,
+                          color: "#7f8487",
+                          marginTop: 2,
+                        }}
+                      >
+                        {dateText}
+                        {treatment && (
+                          <>
+                            <span style={{ padding: "0 6px", color: "#b29362" }}>·</span>
+                            <span>{treatment}</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+              );
+            })}
           </div>
+
+          {/* Disclaimer — bilingual */}
+          {rp.disclaimer && (
+            <div
+              className="container-page"
+              style={{
+                marginTop: 56,
+                paddingTop: 32,
+                borderTop: "1px dotted rgba(178, 147, 98, 0.45)",
+              }}
+            >
+              <p
+                dir="rtl"
+                className="font-prose italic"
+                style={{
+                  fontFamily: "var(--font-amiri), serif",
+                  fontSize: 15,
+                  color: "#2a3f4f",
+                  lineHeight: 1.85,
+                  textAlign: "center",
+                  maxWidth: 680,
+                  margin: "0 auto 12px",
+                }}
+              >
+                {rp.disclaimer.ar}
+              </p>
+              <p
+                className="font-prose italic"
+                style={{
+                  fontSize: 13,
+                  color: "#7f8487",
+                  lineHeight: 1.6,
+                  textAlign: "center",
+                  maxWidth: 680,
+                  margin: "0 auto",
+                }}
+              >
+                {rp.disclaimer.en}
+              </p>
+            </div>
+          )}
         </section>
 
         <BookCtaDark />
