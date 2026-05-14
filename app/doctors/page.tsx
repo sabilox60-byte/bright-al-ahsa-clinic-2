@@ -32,24 +32,15 @@ export default function DoctorsPage() {
             className="container-page grid gap-10 mobile-stack"
             style={{ gridTemplateColumns: "repeat(2, 1fr)" }}
           >
-            {dp.items.map((member, i) => {
-              const isLonelyLast =
-                i === dp.items.length - 1 && dp.items.length % 2 === 1;
-              return (
+            {dp.items.map((member, i) => (
               <article
                 key={i}
                 className="card doctor-card"
-                style={{
-                  padding: 0,
-                  overflow: "hidden",
-                  ...(isLonelyLast
-                    ? { gridColumn: "1 / -1", maxWidth: 720, margin: "0 auto", width: "100%" }
-                    : {}),
-                }}
+                style={{ padding: 0, overflow: "hidden" }}
               >
                 <div
                   className="doctor-card-inner"
-                  style={{ display: "grid", gridTemplateColumns: "0.8fr 1.2fr" }}
+                  style={{ display: "grid", gridTemplateColumns: "0.8fr 1.2fr", height: "100%" }}
                 >
                   <Portrait
                     variant={member.variant}
@@ -110,8 +101,7 @@ export default function DoctorsPage() {
                   </div>
                 </div>
               </article>
-              );
-            })}
+            ))}
           </div>
         </section>
 
