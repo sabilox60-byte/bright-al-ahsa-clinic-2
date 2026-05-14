@@ -10,7 +10,6 @@ import Reviews from "@/components/Reviews";
 import Team from "@/components/Team";
 import BookCta from "@/components/BookCta";
 import Faq from "@/components/Faq";
-import Journal from "@/components/Journal";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -29,7 +28,6 @@ export default function Home() {
         <Team />
         <BookCta />
         <Faq />
-        <Journal />
       </main>
       <Footer />
     </>

@@ -1,4 +1,5 @@
 import Portrait from "./Portrait";
+import Image from "next/image";
 import { clinicConfig } from "@/lib/clinic-config";
 
 export default function Journal() {
@@ -37,11 +38,33 @@ export default function Journal() {
               className="card card-interactive"
               style={{ padding: 0, overflow: "hidden", textDecoration: "none" }}
             >
-              <Portrait
-                variant={post.variant}
-                style={{ width: "100%", height: 200 }}
-                rounded={0}
-              />
+              {post.image ? (
+                <div style={{ position: "relative", width: "100%", height: 200, overflow: "hidden" }}>
+                  <Image
+                    src={post.image}
+                    alt={post.title.en}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style={{ objectFit: "cover", objectPosition: "center" }}
+                  />
+                  <div
+                    aria-hidden
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "linear-gradient(180deg, rgba(10,31,46,0.16) 0%, rgba(10,31,46,0) 40%, rgba(10,31,46,0) 60%, rgba(10,31,46,0.14) 100%)",
+                      pointerEvents: "none",
+                    }}
+                  />
+                </div>
+              ) : (
+                <Portrait
+                  variant={post.variant}
+                  style={{ width: "100%", height: 200 }}
+                  rounded={0}
+                />
+              )}
               <div style={{ padding: 24 }}>
                 <div className="overline" style={{ color: "#7f8487" }}>
                   {post.tag.en} · {post.date.en}
