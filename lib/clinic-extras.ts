@@ -899,7 +899,7 @@ export const clinicExtras: ClinicExtras = {
 - [Services](/services): dermatology, aesthetic care, cosmetic dentistry, OB/GYN consultation, laser, family health — under one roof on Khalid Ibn Al-Walid Street.
 - [Doctors](/doctors): Dr. Wafaa Saeed — Lead Dermatologist, Egyptian Fellowship in Dermatology, on-site daily since opening.
 - [Before & After](/gallery): time-anchored, face-anonymous outcome documentation. Saudi privacy default — written testimonials with treatment dates.
-- [Trust](/trust): MOH-licensed facility, SCFHS-registered clinicians, Egyptian Fellowship Dermatology verifiable, SFDA-registered devices, PDPL-compliant, Tabby+Tamara SAMA-licensed BNPL, Vision 2030 aligned.
+- [Reviews](/reviews): Khaleeji Arabic + English testimonials, written consent. Trust credentials (MOH-licensed facility, SCFHS-registered clinicians, Egyptian Fellowship Dermatology verifiable, SFDA-registered devices, PDPL-compliant, Tabby+Tamara SAMA-licensed BNPL, Vision 2030 aligned) shown as a banner strip at the top of the same page.
 - [Goals](/goals/glow): outcome-led navigation — Glow, Smile, Family, Restore, Diagnose.
 - [Booking](/booking): same-day WhatsApp confirmation on 0557337555. Anonymous inquiry option.
 - [Contact](/contact): Direct line 0502022292 · WhatsApp 0557337555.

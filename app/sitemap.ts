@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/reviews",
     "/journal",
     "/booking",
-    "/trust",
     "/faq",
     "/contact",
     "/privacy",
