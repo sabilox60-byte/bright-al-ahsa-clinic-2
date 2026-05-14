@@ -1,4 +1,5 @@
 import Portrait from "./Portrait";
+import Image from "next/image";
 import { clinicConfig } from "@/lib/clinic-config";
 
 export default function Services() {
@@ -35,11 +36,33 @@ export default function Services() {
               className="card card-interactive"
               style={{ padding: 0, overflow: "hidden" }}
             >
-              <Portrait
-                variant={item.variant}
-                style={{ width: "100%", height: 260 }}
-                rounded={0}
-              />
+              {item.image ? (
+                <div style={{ position: "relative", width: "100%", height: 260, overflow: "hidden" }}>
+                  <Image
+                    src={item.image}
+                    alt={item.name.en}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style={{ objectFit: "cover", objectPosition: "center" }}
+                  />
+                  <div
+                    aria-hidden
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "linear-gradient(180deg, rgba(10,31,46,0.16) 0%, rgba(10,31,46,0) 35%, rgba(10,31,46,0) 65%, rgba(10,31,46,0.14) 100%)",
+                      pointerEvents: "none",
+                    }}
+                  />
+                </div>
+              ) : (
+                <Portrait
+                  variant={item.variant}
+                  style={{ width: "100%", height: 260 }}
+                  rounded={0}
+                />
+              )}
               <div
                 className="flex flex-col gap-3"
                 style={{ padding: 28 }}
