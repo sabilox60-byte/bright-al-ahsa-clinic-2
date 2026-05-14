@@ -1,6 +1,7 @@
 import { clinicExtras } from "@/lib/clinic-extras";
 import type { Locale } from "@/lib/i18n";
 import Link from "next/link";
+import Image from "next/image";
 
 /**
  * Outcome Compass — replaces "Services" navigation with goal-based entry points.
@@ -64,17 +65,47 @@ export default function OutcomeCompass({ locale = "en" }: { locale?: Locale }) {
               href={locale === "ar" ? `/ar/goals/${g.slug}` : `/goals/${g.slug}`}
               className="card card-interactive"
               style={{
-                padding: "32px 24px",
+                padding: g.image ? "0 0 28px" : "32px 24px",
                 display: "flex",
                 flexDirection: "column",
                 gap: 14,
-                minHeight: 240,
+                minHeight: g.image ? 440 : 240,
                 color: "inherit",
                 textDecoration: "none",
                 position: "relative",
                 overflow: "hidden",
               }}
             >
+              {g.image && (
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    height: 220,
+                    overflow: "hidden",
+                    flexShrink: 0,
+                    marginBottom: 8,
+                  }}
+                >
+                  <Image
+                    src={g.image}
+                    alt={`${g.name.en} — ${g.tagline.en}`}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 320px"
+                    style={{ objectFit: "cover", objectPosition: "center 22%" }}
+                  />
+                  <div
+                    aria-hidden
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "linear-gradient(180deg, rgba(10,31,46,0.20) 0%, rgba(10,31,46,0) 36%, rgba(10,31,46,0) 64%, rgba(10,31,46,0.18) 100%)",
+                      pointerEvents: "none",
+                    }}
+                  />
+                </div>
+              )}
               <span
                 aria-hidden
                 style={{
@@ -82,14 +113,23 @@ export default function OutcomeCompass({ locale = "en" }: { locale?: Locale }) {
                   top: 14,
                   right: 14,
                   fontSize: 28,
-                  color: g.accentColor || "#b29362",
-                  opacity: 0.6,
+                  color: g.image ? "#ffffff" : g.accentColor || "#b29362",
+                  opacity: g.image ? 0.95 : 0.6,
                   fontFamily: "var(--font-italiana), serif",
+                  textShadow: g.image ? "0 2px 6px rgba(10,31,46,0.4)" : "none",
+                  lineHeight: 1,
                 }}
               >
                 {g.symbol}
               </span>
-              <div className="overline" style={{ fontSize: 10, color: g.accentColor || "#8f7548" }}>
+              <div
+                className="overline"
+                style={{
+                  fontSize: 10,
+                  color: g.accentColor || "#8f7548",
+                  padding: g.image ? "0 24px" : 0,
+                }}
+              >
                 {locale === "ar" ? "هدف" : "Goal"}
               </div>
               <h3
@@ -99,6 +139,7 @@ export default function OutcomeCompass({ locale = "en" }: { locale?: Locale }) {
                   lineHeight: 1.15,
                   fontWeight: 600,
                   color: "#0a1f2e",
+                  padding: g.image ? "0 24px" : 0,
                 }}
               >
                 {g.name[locale]}
@@ -110,6 +151,7 @@ export default function OutcomeCompass({ locale = "en" }: { locale?: Locale }) {
                   color: "#2a3f4f",
                   lineHeight: 1.5,
                   flex: 1,
+                  padding: g.image ? "0 24px" : 0,
                 }}
               >
                 {g.tagline[locale]}
@@ -123,6 +165,7 @@ export default function OutcomeCompass({ locale = "en" }: { locale?: Locale }) {
                   letterSpacing: "0.04em",
                   textTransform: "uppercase",
                   marginTop: 8,
+                  padding: g.image ? "0 24px" : 0,
                 }}
               >
                 {locale === "ar" ? "اكتشفي" : "Explore"} →
