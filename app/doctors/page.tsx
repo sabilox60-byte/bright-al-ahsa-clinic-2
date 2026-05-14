@@ -29,18 +29,36 @@ export default function DoctorsPage() {
 
         <section className="section" style={{ position: "relative", zIndex: 2 }}>
           <div
-            className="container-page grid gap-10 mobile-stack"
-            style={{ gridTemplateColumns: "repeat(2, 1fr)" }}
+            className="container-page doctors-flex"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 40,
+              justifyContent: "center",
+              alignItems: "stretch",
+            }}
           >
             {dp.items.map((member, i) => (
               <article
                 key={i}
                 className="card doctor-card"
-                style={{ padding: 0, overflow: "hidden" }}
+                style={{
+                  padding: 0,
+                  overflow: "hidden",
+                  flex: "1 1 480px",
+                  maxWidth: 560,
+                  minWidth: 320,
+                  display: "flex",
+                  flexDirection: "column",
+                }}
               >
                 <div
                   className="doctor-card-inner"
-                  style={{ display: "grid", gridTemplateColumns: "0.8fr 1.2fr", height: "100%" }}
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "0.8fr 1.2fr",
+                    flex: 1,
+                  }}
                 >
                   <Portrait
                     variant={member.variant}
