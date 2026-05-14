@@ -1,4 +1,3 @@
-import Portrait from "./Portrait";
 import { clinicConfig } from "@/lib/clinic-config";
 
 export default function Reviews() {
@@ -94,19 +93,11 @@ export default function Reviews() {
               {/* Attribution row */}
               <figcaption
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 14,
                   paddingTop: 18,
                   borderTop: "1px dotted rgba(178,147,98,0.4)",
                 }}
               >
-                <Portrait
-                  variant={item.variant}
-                  style={{ width: 44, height: 44, flexShrink: 0 }}
-                  rounded={999}
-                />
-                <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ minWidth: 0 }}>
                   <div
                     style={{
                       fontSize: 14,

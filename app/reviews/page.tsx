@@ -1,7 +1,6 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
-import Portrait from "@/components/Portrait";
 import BookCtaDark from "@/components/BookCtaDark";
 import { clinicConfig } from "@/lib/clinic-config";
 import { clinicExtras } from "@/lib/clinic-extras";
@@ -183,21 +182,12 @@ export default function ReviewsPage() {
                   </p>
                   <figcaption
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 12,
                       marginTop: "auto",
                       paddingTop: 16,
                       borderTop: "1px dotted #8f7548",
-                      flexDirection: isArabic ? "row-reverse" : "row",
                     }}
                   >
-                    <Portrait
-                      variant={r.variant}
-                      style={{ width: 44, height: 44, borderRadius: 999 }}
-                      rounded={999}
-                    />
-                    <div style={{ flex: 1 }}>
+                    <div>
                       <div
                         style={{
                           fontSize: 14,
