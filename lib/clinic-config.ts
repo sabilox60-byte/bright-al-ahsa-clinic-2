@@ -581,6 +581,20 @@ export const clinicConfig: ClinicConfig = {
         credentials: ["MD · Egyptian Fellowship in Dermatology", "Cairo School of Dermatology — clinical training", "Bright Al Ahsa Lead since January 2025", "Female-only session protocol on request"],
         variant: "terracotta",
       },
+      {
+        name: "Dr. Marina Naddaf",
+        role: { en: "Visiting Senior Dermatologist · Bright Network", ar: "أخصّائية الجلدية الكبيرة الزائرة · شبكة برايت" },
+        bio: { en: "Senior dermatologist with twenty-five years of clinical practice across the Gulf. AAD member since 2004, Canadian Laser Diploma. Visits Bright Al Ahsa monthly by appointment for laser consultations, complex pigmentation cases, and second-opinion reviews. Known for quiet, restrained results that age gracefully — never theatrical, never overdone.", ar: "أخصّائية جلدية كبيرة بخمسةٍ وعشرين عاماً من الممارسة السريرية عبر الخليج. عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤، حاصلة على دبلوم الليزر الكندي. تزور برايت الأحساء شهرياً بالموعد لاستشارات الليزر، حالات التصبّغ المعقّدة، ومراجعات الرأي الثاني. تُعرف بنتائج هادئة ومعتدلة تشيخ بكرامة — بلا مبالغة، بلا استعراض." },
+        credentials: ["MD · MSc Dermatology", "American Academy of Dermatology — member since 2004", "Canadian Laser Diploma", "Visits Al Ahsa monthly by appointment"],
+        variant: "sand",
+      },
+      {
+        name: "Dr. Hassan Nazzal",
+        role: { en: "Visiting Maxillofacial Consultant · Bright Network", ar: "استشاري جراحة الفم والوجه الزائر · شبكة برايت" },
+        bio: { en: "Jordanian Board-certified maxillofacial surgeon with Fellowship from the Royal College of Surgeons in Ireland (RCSI). Senior partner of the Bright clinical network. Available at Bright Al Ahsa for scheduled smile-design consultations, veneer treatment planning, and complex cosmetic dentistry reviews. His signature is restraint — the smile should fit you, never the other way around.", ar: "جرّاح فم ووجه وفكّين معتمَد من المجلس الأردني، حاصل على زمالة الكلية الملكية للجرّاحين في أيرلندا. الشريك الأوّل في شبكة برايت السريرية. متاح في برايت الأحساء لاستشارات تصميم الابتسامة المجدولة، التخطيط لعلاجات الفينير، ومراجعات تجميل الأسنان المعقّدة. بصمته هي الاعتدال — الابتسامة يجب أن تليق بكِ، لا أن تُلائميها." },
+        credentials: ["MD · Jordanian Board of Maxillofacial Surgery", "FRCS · Royal College of Surgeons in Ireland", "Senior partner · Bright clinical network", "Al Ahsa consultations by appointment"],
+        variant: "sage",
+      },
     ],
   },
 

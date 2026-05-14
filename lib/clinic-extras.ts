@@ -388,6 +388,38 @@ export const clinicExtras: ClinicExtras = {
           ar: "رئيسة قسم الجلدية في برايت الأحساء منذ يوم الافتتاح، يناير ٢٠٢٥. طبيبة جلدية بزمالة مصرية، متخصّصة في بروتوكولات تجميلية مكتوبة ومعتدلة للسيدات السعوديات — تصميم فيلر الوجه الكامل، أنظمة الهيدرافيشيال، تركيبات الهيدرا-بوتوكس، والعناية المعتدلة بمكافحة الشيخوخة.",
         },
       },
+      {
+        slug: "marina-naddaf",
+        nameEn: "Dr. Marina Naddaf",
+        nameAr: "د. مارينا نداف",
+        scfhsNumber: undefined,
+        medicalSpecialty: "Dermatology",
+        yearsExperience: 25,
+        languages: ["ar", "en", "fr"],
+        education: ["MD · MSc Dermatology"],
+        certifications: ["American Academy of Dermatology — member since 2004", "Canadian Laser Diploma", "Visits Al Ahsa monthly by appointment"],
+        portraitVariant: "sand",
+        socialUrls: ["https://www.instagram.com/drmarinanaddaf/", "https://www.snapchat.com/@drmnaddaf"],
+        bio: {
+          en: "Senior dermatologist with twenty-five years of clinical practice across the Gulf. AAD member since 2004, Canadian Laser Diploma. Visits Bright Al Ahsa monthly by appointment for laser consultations, complex pigmentation cases, and second-opinion reviews.",
+          ar: "أخصّائية جلدية كبيرة بخمسةٍ وعشرين عاماً من الممارسة السريرية عبر الخليج. عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤، حاصلة على دبلوم الليزر الكندي. تزور برايت الأحساء شهرياً بالموعد لاستشارات الليزر، حالات التصبّغ المعقّدة، ومراجعات الرأي الثاني.",
+        },
+      },
+      {
+        slug: "hassan-nazzal",
+        nameEn: "Dr. Hassan Nazzal",
+        nameAr: "د. حسن نزال",
+        scfhsNumber: undefined,
+        medicalSpecialty: "MaxillofacialSurgery",
+        languages: ["ar", "en"],
+        education: ["MD · Jordanian Board of Maxillofacial Surgery"],
+        certifications: ["FRCS · Royal College of Surgeons in Ireland", "Senior partner · Bright clinical network", "Al Ahsa consultations by appointment"],
+        portraitVariant: "sage",
+        bio: {
+          en: "Jordanian Board-certified maxillofacial surgeon with Fellowship from the Royal College of Surgeons in Ireland (RCSI). Senior partner of the Bright clinical network. Available at Bright Al Ahsa for scheduled smile-design consultations, veneer treatment planning, and complex cosmetic dentistry reviews.",
+          ar: "جرّاح فم ووجه وفكّين معتمَد من المجلس الأردني، حاصل على زمالة الكلية الملكية للجرّاحين في أيرلندا. الشريك الأوّل في شبكة برايت السريرية. متاح في برايت الأحساء لاستشارات تصميم الابتسامة المجدولة، التخطيط لعلاجات الفينير، ومراجعات تجميل الأسنان المعقّدة.",
+        },
+      },
     ],
     procedures: [
       {
