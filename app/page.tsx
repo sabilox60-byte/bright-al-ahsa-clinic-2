@@ -4,7 +4,6 @@ import MarqueeBand from "@/components/MarqueeBand";
 import Services from "@/components/Services";
 import TailoredCare from "@/components/TailoredCare";
 import OutcomeCompass from "@/components/OutcomeCompass";
-import LivingPulse from "@/components/LivingPulse";
 import BeforeAfter from "@/components/BeforeAfter";
 import Reviews from "@/components/Reviews";
 import BookCta from "@/components/BookCta";
@@ -16,7 +15,6 @@ export default function Home() {
     <>
       <Nav />
       <main id="main" className="page-in">
-        <LivingPulse locale="en" />
         <Hero />
         <MarqueeBand />
         <OutcomeCompass locale="en" />
