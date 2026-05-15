@@ -25,6 +25,7 @@ export default function DoctorsPage() {
           titleEm={dp.hero.titleEm.en}
           sub={dp.hero.sub.en}
           variant="sage"
+          image="/media/heros/gallery-hero.webp"
         />
 
         <section className="section" style={{ position: "relative", zIndex: 2 }}>

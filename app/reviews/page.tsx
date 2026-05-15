@@ -26,6 +26,7 @@ export default function ReviewsPage() {
           titleEm={rp.hero.titleEm.en}
           sub={rp.hero.sub.en}
           variant="sage"
+          image="/media/heros/reviews-hero.webp"
         />
 
         {/* Trust badges strip — verifiable credentials moved from /trust */}

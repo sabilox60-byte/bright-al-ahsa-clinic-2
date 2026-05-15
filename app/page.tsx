@@ -7,7 +7,6 @@ import OutcomeCompass from "@/components/OutcomeCompass";
 import LivingPulse from "@/components/LivingPulse";
 import BeforeAfter from "@/components/BeforeAfter";
 import Reviews from "@/components/Reviews";
-import Team from "@/components/Team";
 import BookCta from "@/components/BookCta";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
@@ -25,7 +24,6 @@ export default function Home() {
         <TailoredCare />
         <BeforeAfter />
         <Reviews />
-        <Team />
         <BookCta />
         <Faq />
       </main>

@@ -1,4 +1,3 @@
-import Portrait from "./Portrait";
 import { clinicConfig } from "@/lib/clinic-config";
 
 function WhatsAppIcon({ size = 16 }: { size?: number }) {
@@ -20,16 +19,8 @@ export default function BookCta() {
   const b = clinicConfig.bookCta;
   return (
     <section className="section section-terra" id="contact">
-      <div
-        className="container-page grid gap-8 items-center"
-        style={{ gridTemplateColumns: "1fr 2fr 1fr" }}
-      >
-        <Portrait
-          variant="sand"
-          style={{ width: 200, height: 240, background: "#f0ece1" }}
-          rounded={20}
-        />
-        <div className="text-center">
+      <div className="container-page">
+        <div className="text-center" style={{ maxWidth: 720, marginInline: "auto" }}>
           <div
             style={{
               fontSize: 11,
@@ -103,11 +94,6 @@ export default function BookCta() {
             </a>
           </div>
         </div>
-        <Portrait
-          variant="terracotta"
-          style={{ width: 200, height: 240, background: "#d4b899" }}
-          rounded={20}
-        />
       </div>
     </section>
   );
