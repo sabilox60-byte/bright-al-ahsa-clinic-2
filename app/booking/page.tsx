@@ -59,6 +59,7 @@ export default function BookingPage() {
           titleEm={bp.hero.titleEm.en}
           sub={bp.hero.sub.en}
           variant="terracotta"
+          image="/media/heros/contact-hero.webp"
         />
 
         <section className="section" style={{ position: "relative", zIndex: 2 }}>

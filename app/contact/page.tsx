@@ -36,7 +36,7 @@ export default function ContactPage() {
           title="Reach us"
           titleEm="the way you prefer."
           sub="Most patients reach us on WhatsApp — messages are read the same day. For something private, voicemail or in-person."
-          image="/media/heros/journal-hero.webp"
+          image="/media/heros/contact-hero.webp"
         />
 
         <section className="section" style={{ background: "#f6f5f4", position: "relative", zIndex: 2 }}>
