@@ -1,4 +1,4 @@
-import Portrait from "./Portrait";
+import Image from "next/image";
 import ChapterMark from "./ChapterMark";
 import { clinicConfig } from "@/lib/clinic-config";
 
@@ -10,8 +10,14 @@ export default function TailoredCare() {
         className="container-page grid gap-10 items-center mobile-stack"
         style={{ gridTemplateColumns: "1fr 1fr" }}
       >
-        <div className="relative">
-          <Portrait variant="dark" style={{ width: "100%", height: 420 }} />
+        <div className="relative" style={{ width: "100%", height: 420, borderRadius: 14, overflow: "hidden" }}>
+          <Image
+            src="/media/care/standard.webp"
+            alt={c.headlinePartA.en + " " + c.headlineEm.en}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
           <div
             style={{
               position: "absolute",
@@ -25,6 +31,7 @@ export default function TailoredCare() {
               letterSpacing: "0.5px",
               textTransform: "uppercase",
               fontWeight: 600,
+              boxShadow: "0 4px 12px rgba(10,31,46,0.25)",
             }}
           >
             {c.badge.en}
