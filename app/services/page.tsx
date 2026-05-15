@@ -26,7 +26,7 @@ export default function ServicesPage() {
           titleEm={dp.hero.titleEm.en}
           sub={dp.hero.sub.en}
           variant="terracotta"
-          image="/media/heros/services-hero.webp"
+          image="/media/heros/contact-hero.webp"
         />
 
         {dp.items.map((dept, idx) => (

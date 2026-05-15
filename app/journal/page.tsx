@@ -23,7 +23,7 @@ export default function JournalPage() {
           titleEm={jp.hero.titleEm.en}
           sub={jp.hero.sub.en}
           variant="terracotta"
-          image="/media/heros/reviews-hero.webp"
+          image="/media/heros/contact-hero.webp"
         />
 
         <section className="section" style={{ position: "relative", zIndex: 2 }}>
