@@ -8,7 +8,7 @@ function StatMark({ num, label }: { num: string; label: string }) {
   return (
     <div>
       <div
-        className="font-serif"
+        className="font-serif stat-num"
         style={{
           fontSize: 22,
           fontWeight: 600,
@@ -19,6 +19,7 @@ function StatMark({ num, label }: { num: string; label: string }) {
         {num}
       </div>
       <div
+        className="stat-label"
         style={{
           fontSize: 12,
           color: "rgba(255,255,255,0.78)",
@@ -104,7 +105,7 @@ export default function Hero() {
             </p>
           )}
           <div
-            className="flex gap-3 flex-wrap items-center"
+            className="flex gap-3 flex-wrap items-center hero-cta-row"
             style={{ marginTop: clinicConfig.hero.lead.en ? 0 : 48 }}
           >
             <a
@@ -120,7 +121,7 @@ export default function Hero() {
             </a>
             <SisterShare locale="en" />
           </div>
-          <div style={{ marginTop: 22 }}>
+          <div className="maaroof-ribbon-wrap" style={{ marginTop: 22 }}>
             <MaaroofRibbon locale="en" />
           </div>
           <div className="mt-12 flex gap-9 items-center flex-wrap hero-stats">

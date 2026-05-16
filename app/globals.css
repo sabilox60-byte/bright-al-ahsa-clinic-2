@@ -868,8 +868,9 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   /* ── Hero MOBILE refinement — premium deal-closer look ──────────────
      1) Hide the small eyebrow line on hero (it crowds the headline).
      2) Switch headline to Cormorant Garamond for luxe editorial feel.
-     3) Headline rises into the freed eyebrow space naturally.
-     Stats already pushed down via hero-stats margin-top above.            */
+     3) Hide Maaroof rating ribbon — clinic-specific value, we drop on demos.
+     4) Stats: smaller, lux Cormorant numbers, more breathing room.
+     5) CTA buttons: pushed slightly lower to fill the freed space cleanly.    */
   .hero-textreadable .overline { display: none !important; }
   .hero-textreadable .h-display {
     font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif !important;
@@ -879,6 +880,25 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   .hero-textreadable .h-display em {
     font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif !important;
     font-weight: 500 !important;
+  }
+  /* Hide Maaroof ribbon on mobile (we'll re-introduce per-clinic data later) */
+  .maaroof-ribbon-wrap { display: none !important; }
+  /* CTA row — slightly lower so it doesn't hug the headline */
+  .hero-cta-row { margin-top: 32px !important; }
+  /* Stats — smaller + lux Cormorant + pushed down + tighter cluster */
+  .hero-stats { margin-top: 64px !important; gap: 16px !important; }
+  .hero-stats .stat-num {
+    font-size: 16px !important;
+    font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.005em !important;
+  }
+  .hero-stats .stat-label {
+    font-size: 10px !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    margin-top: 4px !important;
+    color: rgba(255,255,255,0.72) !important;
   }
 
   /* ── Hero video on mobile — FULL visibility, no overlay ─────────────
