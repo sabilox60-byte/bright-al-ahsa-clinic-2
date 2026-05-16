@@ -898,18 +898,22 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   /* Hide secondary CTA on mobile — primary + sister-share + ribbon are enough */
   .hero-cta-secondary { display: none !important; }
 
-  /* ── Hero MOBILE — flex push stats to the bottom of viewport ─────────
-     Section becomes flex-column; content + textreadable flex-grow to fill;
-     stats use margin-top: auto so they naturally pin to the bottom of the
-     hero section (= end of the video animation). No absolute positioning
-     means no overflow surprises on smaller phones.                              */
+  /* ── Hero MOBILE — push CTAs + stats TOGETHER to the bottom ──────────
+     Strategy: force .hero-textreadable to fill the viewport-minus-nav-minus-padding
+     and turn it into a flex column. Then margin-top: auto on the CTA row
+     pushes the CTAs + stats block together to the bottom of that flex container,
+     leaving empty breathing space between the headline and the action cluster.    */
   .scroll-indicator { display: none !important; }
-  .hero-section { display: flex !important; flex-direction: column !important; }
-  .hero-content { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; }
-  .hero-textreadable { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; }
+  .hero-textreadable {
+    min-height: calc(100vh - 80px - 168px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  /* The CTAs row gets the auto-margin — stats follow it naturally just below */
+  .hero-cta-row { margin-top: auto !important; }
   .hero-stats {
-    margin-top: auto !important;
-    padding-top: 24px !important;
+    margin-top: 16px !important;
+    padding-top: 0 !important;
     gap: 16px !important;
     position: static !important;
     width: auto !important;
