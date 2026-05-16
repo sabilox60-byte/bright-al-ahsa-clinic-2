@@ -898,12 +898,23 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   /* Hide secondary CTA on mobile — primary + sister-share + ribbon are enough */
   .hero-cta-secondary { display: none !important; }
 
-  /* ── Hero MOBILE — compact override of the global hero refinement ────
+  /* ── Hero MOBILE — pin stats to BOTTOM of viewport (not middle of animation) ──
      Globals already hide eyebrow / lux headline / hide Maaroof / push CTA.
-     Mobile overrides: tighter stats cluster + smaller stat sizes + bigger push down
-     so the stats sit BELOW the video animation centre, fully visible.          */
-  .hero-stats { margin-top: 96px !important; gap: 18px !important; }
-  .hero-stats .stat-num { font-size: 16px !important; }
+     Here we anchor .hero-stats absolutely at the bottom of the hero section so
+     they sit at the end of the video animation, fully visible, no matter how
+     much content stacks above. ScrollIndicator hidden to free that slot.        */
+  .scroll-indicator { display: none !important; }
+  .hero-stats {
+    position: absolute !important;
+    left: 22px !important;
+    right: 22px !important;
+    bottom: 28px !important;
+    margin-top: 0 !important;
+    gap: 16px !important;
+    z-index: 4 !important;
+    width: auto !important;
+  }
+  .hero-stats .stat-num { font-size: 15px !important; }
   .hero-stats .stat-label { font-size: 10px !important; }
 
   /* ── Hero video on mobile — FULL visibility, no overlay ─────────────
